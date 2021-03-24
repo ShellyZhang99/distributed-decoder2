@@ -1,6 +1,7 @@
 #ifndef PARALLEL_DECODER_H
 #define PARALLEL_DECODER_H
 #include "parallel_excl_decoder.h"
+#include "pt_cpu.h"
 #include <iostream>
 #include <stdlib.h>
 #include <stdio.h>
@@ -38,6 +39,8 @@ public:
     int load_pt(char *arg, const char *prog);
 
     int pt2_sb_pevent(char *filename, const char *prog);
+
+    int pt_cpu_parse(struct pt_cpu *cpu, const char *s);
 
     static int pt2_sb_output_error(int errcode, const char *filename, uint64_t offset, void *priv)
     {
@@ -80,9 +83,9 @@ public:
 
     int alloc_decoder(const char *prog);
 
-    Parallel_excl_decoder* add_excl_decoder(const char *config_filename, int primary, char* pt_filename);
+    int add_excl_decoder(char *config_filename, int primary, char* pt_filename);
 
-    int parallel_decode(const char *config_filename, int primary, char* pt_filename);
+    int parallel_decode(char *config_filename, int primary, char* pt_filename);
 
     int pt2_cpu_parse(struct pt_cpu *cpu, char *s)
     {

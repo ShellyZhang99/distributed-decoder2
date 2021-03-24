@@ -1,12 +1,11 @@
 #ifndef PARALLEL_EXCL_DECODER_H
 #define PARALLEL_EXCL_DECODER_H
 
-#include "libipt/internal/include/pt_cpu.h"
-#include "libipt/include/intel_pt.h"
-#include "sideband/include/libipt_sb.h"
-#include "profiler/include/profiler.h"
-#include "profiler/internal/include/pt_profiler.h"
-#include "include/threads.h"
+#include "intel_pt.h"
+#include "libipt_sb.h"
+#include "profiler.h"
+#include "pt_profiler.h"
+#include "threads.h"
 #include <iostream>
 #include <stdlib.h>
 #include <stdio.h>

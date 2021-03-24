@@ -14,11 +14,11 @@ cd profiler
 gcc -fPIC -c ./src/*.c -I ./include -I ./internal/include -I ../libipt/include -I ../include
 mv *.o ../
 cd ..
-gcc -c pt2_decoder.c -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I ./include
-gcc *.o -lbfd -lpthread  -o pt2_decoder
-#g++ -fPIC -c parallel_excl_decoder.cpp -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I ./include
+#gcc -c pt2_decoder.c -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I ./include
+#gcc *.o -lbfd -lpthread  -o pt2_decoder
+gcc -fPIC -c parallel_excl_decoder.cpp -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I profiler/internal/include -I ./include
 
-#g++ -fPIC -c parallel_decoder.cpp -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I ./include -I ./
-#g++ -fPIC -c c_wrapper.cpp -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I ./include -I ./
-#g++ *.o -lbfd -lpthread -fPIC -shared -o cpplib_shared.so
+gcc -fPIC -c parallel_decoder.cpp -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I ./include -I profiler/internal/include -I ./
+gcc -fPIC -c c_wrapper.cpp -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I profiler/internal/include -I ./include -I ./
+g++ *.o -lbfd -lpthread -fPIC -shared -o cpplib_shared.so
 rm *.o
