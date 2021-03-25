@@ -678,12 +678,6 @@ int Parallel_decoder::parallel_decode(char *config_filename, int primary, char* 
             /* override cpu information before the decoder
              * is initialized.
              */
-            if (pt2_have_decoder()) {
-                fprintf(stderr,
-                    "%s: please specify cpu before the pt source file.1111\n",
-                    prog);
-                goto err;
-            }
 
             argc = fscanf(config_file, "%s", arg);
             if (argc != 1) {
