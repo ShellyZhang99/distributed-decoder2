@@ -33,8 +33,18 @@ Parallel_decoder::Parallel_decoder()
 
         excl_decoder2->id = i;
         excl_decoder2->iscache = pt_iscache_alloc(NULL);
-
-        excl_decoder2->session = pt_sb_alloc(excl_decoder2->iscache);
+        if (!excl_decoder2->iscache)
+        {
+            printf("error1\n");
+                    return ;
+        }
+                excl_decoder2->session = pt_sb_alloc(excl_decoder2->iscache);
+                if (!excl_decoder2->session) {
+                    pt_iscache_free(excl_decoder->iscache);
+                    printf("error2\n");
+                    return ;
+                }
+                         excl_decoder2->profiler = pt_profiler_alloc();
     }
 
     memset(&this->pevent, 0, sizeof(this->pevent));
@@ -678,6 +688,13 @@ int Parallel_decoder::parallel_decode(char *config_filename, int primary, char* 
             /* override cpu information before the decoder
              * is initialized.
              */
+
+            if (pt2_have_decoder()) {
+                fprintf(stderr,
+                    "%s: please specify cpu before the pt source file.\n",
+                    prog);
+                goto err;
+            }
 
             argc = fscanf(config_file, "%s", arg);
             if (argc != 1) {

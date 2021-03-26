@@ -20,5 +20,7 @@ gcc -fPIC -c parallel_excl_decoder.cpp -I libipt/internal/include/ -I libipt/inc
 
 gcc -fPIC -c parallel_decoder.cpp -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I ./include -I profiler/internal/include -I ./
 gcc -fPIC -c c_wrapper.cpp -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I profiler/internal/include -I ./include -I ./
-g++ *.o -lbfd -lpthread -fPIC -shared -o cpplib_shared.so
+g++ *.o -lbfd -lpthread -shared -fPIC -o cpplib_shared.so
+#gcc -fPIC -c c_wrapper.cpp -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I profiler/internal/include -I ./include -I ./
+#g++ *.o -lbfd -lpthread -o Main
 rm *.o

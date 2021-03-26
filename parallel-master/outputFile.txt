@@ -1,0 +1,2295 @@
+
+
+/build/glibc-S9d2JN/glibc-2.27/posix/../sysdeps/unix/sysv/linux/_exit.c
+		line:27		1
+		line:31		2
+		line:33		1
+			__GI__exit   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/libio/libioP.h
+		line:870		3
+
+
+/build/glibc-S9d2JN/glibc-2.27/libio/genops.c
+		line:749		1
+		line:750		1
+		line:754		1
+		line:755		3
+		line:758		9
+		line:760		3
+		line:761		6
+		line:762		1
+		line:764		4
+		line:772		3
+		line:774		3
+		line:778		1
+		line:779		1
+		line:783		1
+		line:849		2
+		line:850		3
+		line:853		6
+		line:862		3
+		line:864		2
+		line:894		1
+		line:901		3
+		line:905		1
+		line:906		1
+		line:926		2
+		line:929		3
+		line:941		1
+			_IO_flush_all_lockp   1
+			_IO_cleanup   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/nptl/unregister-atfork.c
+		line:28		2
+		line:36		1
+		line:39		1
+		line:121		1
+			__unregister_atfork   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/stdlib/cxa_finalize.c
+		line:30		3
+		line:33		3
+		line:36		2
+		line:40		1
+		line:94		2
+		line:98		1
+		line:106		1
+		line:107		1
+		line:109		1
+		line:110		1
+			__cxa_finalize   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/dl-fini.c
+		line:30		1
+		line:47		1
+		line:50		2
+		line:53		1
+		line:55		1
+		line:58		1
+		line:60		1
+		line:65		1
+		line:68		2
+		line:73		5
+		line:75		4
+		line:77		4
+		line:79		4
+		line:80		4
+		line:81		4
+		line:85		4
+		line:87		1
+		line:88		1
+		line:94		1
+		line:104		1
+		line:109		5
+		line:111		4
+		line:113		4
+		line:116		3
+		line:119		3
+		line:120		2
+		line:123		1
+		line:134		3
+		line:135		1
+		line:136		2
+		line:137		2
+		line:138		2
+		line:142		1
+		line:143		1
+		line:149		3
+		line:165		4
+		line:171		1
+		line:177		1
+		line:184		1
+			_dl_fini   2
+
+
+/build/glibc-S9d2JN/glibc-2.27/stdlib/cxa_thread_atexit_impl.c
+		line:145		1
+		line:146		1
+		line:164		1
+			__GI___call_tls_dtors   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/stdlib/exit.c
+		line:40		2
+		line:45		3
+		line:46		2
+		line:53		1
+		line:56		2
+		line:59		2
+		line:61		2
+		line:65		1
+		line:66		1
+		line:70		2
+		line:72		2
+		line:73		1
+		line:76		1
+		line:77		1
+		line:103		1
+		line:106		2
+		line:108		2
+		line:109		1
+		line:112		1
+		line:114		1
+		line:120		2
+		line:121		2
+		line:126		1
+		line:129		1
+		line:130		2
+		line:132		1
+		line:138		1
+		line:139		2
+			__run_exit_handlers   1
+			__GI_exit   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/setjmp/sigjmp.c
+		line:28		1
+		line:29		2
+		line:34		1
+			__sigjmp_save   1
+
+
+crtstuff.c
+		line:0		3
+			deregister_tm_clones   1
+			__do_global_dtors_aux   1
+			frame_dummy   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/stdlib/cxa_atexit.c
+		line:39		2
+		line:40		1
+		line:42		1
+		line:49		1
+		line:51		1
+		line:52		1
+		line:53		1
+		line:54		1
+		line:55		1
+		line:56		1
+		line:65		2
+		line:67		1
+		line:78		2
+		line:79		1
+		line:84		1
+		line:89		3
+		line:91		1
+		line:99		1
+		line:120		1
+		line:121		1
+		line:134		1
+		line:135		1
+		line:139		1
+			__new_exitfn   1
+			__GI___cxa_atexit   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/csu/../csu/libc-start.c
+		line:137		2
+		line:141		3
+		line:239		2
+		line:240		1
+		line:262		1
+		line:265		1
+		line:266		1
+		line:270		1
+		line:285		1
+		line:297		1
+		line:298		1
+		line:303		1
+		line:304		1
+		line:307		1
+		line:310		1
+		line:344		1
+			__libc_start_main   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../bits/stdlib-bsearch.h
+		line:27		12
+		line:28		12
+		line:29		81
+		line:31		81
+		line:32		81
+		line:37		15
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86/cacheinfo.c
+		line:119		81
+		line:122		81
+		line:128		24
+		line:132		6
+		line:134		3
+		line:138		36
+		line:140		24
+		line:142		15
+		line:144		15
+		line:152		15
+		line:161		3
+		line:164		11
+		line:167		8
+		line:171		8
+		line:173		8
+		line:175		5
+		line:177		3
+		line:178		4
+		line:179		5
+		line:181		3
+		line:183		3
+		line:185		9
+		line:186		3
+		line:187		6
+		line:188		6
+		line:196		5
+		line:203		12
+		line:225		12
+		line:250		12
+		line:255		6
+		line:259		6
+		line:261		3
+		line:264		3
+		line:270		3
+		line:272		3
+		line:273		3
+		line:275		3
+		line:281		6
+		line:286		6
+		line:288		6
+		line:289		3
+		line:293		3
+		line:295		3
+		line:298		3
+		line:300		3
+		line:319		3
+		line:488		1
+		line:500		2
+		line:502		1
+		line:504		3
+		line:506		3
+		line:510		1
+		line:511		3
+		line:519		2
+		line:530		1
+		line:535		1
+		line:539		1
+		line:547		4
+		line:550		4
+		line:556		4
+		line:559		4
+		line:564		1
+		line:568		2
+		line:569		1
+		line:573		1
+		line:577		3
+		line:580		3
+		line:581		1
+		line:586		4
+		line:592		1
+		line:600		3
+		line:602		4
+		line:604		3
+		line:606		2
+		line:609		2
+		line:610		2
+		line:612		2
+		line:615		1
+		line:620		1
+		line:622		3
+		line:623		2
+		line:624		1
+		line:627		1
+		line:630		1
+		line:634		1
+		line:637		1
+		line:639		1
+		line:640		1
+		line:645		1
+		line:650		1
+		line:651		1
+		line:652		1
+		line:653		1
+		line:654		2
+		line:691		1
+		line:692		1
+		line:696		1
+		line:755		1
+		line:758		1
+		line:760		3
+		line:761		1
+		line:763		1
+		line:764		1
+		line:765		1
+		line:768		1
+		line:771		1
+		line:773		3
+		line:774		1
+		line:776		1
+		line:777		1
+		line:778		1
+		line:786		2
+		line:788		1
+		line:789		1
+			intel_check_word   6
+			handle_intel   3
+			init_cacheinfo   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/libio/vtables.c
+		line:84		1
+		line:85		1
+		line:86		1
+		line:88		1
+			check_stdfiles_vtables   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/ctype/ctype-info.c
+		line:31		3
+		line:33		2
+		line:35		3
+		line:36		1
+			__GI___ctype_init   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/misc/init-misc.c
+		line:30		1
+		line:31		2
+		line:33		1
+		line:37		1
+		line:38		1
+		line:40		1
+			__init_misc   2
+
+
+/build/glibc-S9d2JN/glibc-2.27/csu/../sysdeps/unix/sysv/linux/x86_64/init-first.c
+		line:36		3
+		line:38		2
+		line:40		3
+		line:41		1
+		line:42		1
+		line:44		3
+		line:45		1
+		line:46		1
+
+
+/build/glibc-S9d2JN/glibc-2.27/csu/../sysdeps/generic/dl-hash.h
+		line:43		1
+		line:44		1
+		line:45		5
+		line:48		4
+		line:62		4
+		line:67		1
+
+
+/build/glibc-S9d2JN/glibc-2.27/csu/../csu/init-first.c
+		line:52		1
+		line:55		2
+		line:62		2
+		line:67		1
+		line:68		1
+		line:69		2
+		line:81		2
+		line:84		1
+		line:89		1
+			_init   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/dl-init.c
+		line:30		3
+		line:36		3
+		line:39		6
+		line:40		1
+		line:44		2
+		line:45		1
+		line:49		1
+		line:58		2
+		line:62		1
+		line:68		2
+		line:70		2
+		line:71		4
+		line:72		4
+		line:79		1
+		line:80		1
+		line:81		1
+		line:84		2
+		line:92		1
+		line:117		1
+		line:118		4
+		line:119		3
+		line:125		1
+
+
+/build/glibc-S9d2JN/glibc-2.27/time/../sysdeps/unix/sysv/linux/x86/gettimeofday.c
+		line:42		4
+			__gettimeofday_ifunc   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/strncase_l.c
+		line:31		1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/strchrnul.c
+		line:31		1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/stpcpy.c
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/stpncpy.c
+		line:31		1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/strspn.c
+		line:29		1
+
+
+/build/glibc-S9d2JN/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/wcslen.c
+		line:29		1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/memchr.c
+		line:29		1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/strcasecmp_l.c
+		line:31		1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/memrchr.c
+		line:29		1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/strlen.c
+		line:29		1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/strchr.c
+		line:38		2
+		line:40		2
+		line:49		1
+			strchr_ifunc_selector   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/strpbrk.c
+		line:29		1
+
+
+/build/glibc-S9d2JN/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/wmemset.c
+		line:31		2
+
+
+/build/glibc-S9d2JN/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/ifunc-wmemset.h
+		line:30		4
+		line:32		4
+		line:34		2
+		line:35		2
+			wmemset_ifunc_selector   2
+
+
+/build/glibc-S9d2JN/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/wcsnlen.c
+		line:38		2
+		line:40		2
+		line:49		1
+			wcsnlen_ifunc_selector   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/strcpy.c
+		line:29		1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/strncase.c
+		line:31		1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/strcspn.c
+		line:29		1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-sse4_2.h
+		line:30		3
+			strspn_ifunc_selector   1
+			strpbrk_ifunc_selector   1
+			strcspn_ifunc_selector   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/strnlen.c
+		line:31		2
+
+
+/build/glibc-S9d2JN/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/wcschr.c
+		line:31		2
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-memset.h
+		line:42		1
+		line:45		1
+		line:46		1
+		line:57		1
+		line:59		1
+			memset_ifunc_selector   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/strcmp.c
+		line:38		1
+		line:47		1
+			strcmp_ifunc_selector   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/strncmp.c
+		line:38		1
+		line:39		1
+		line:48		1
+			strncmp_ifunc_selector   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/memcmp.c
+		line:29		1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-memcmp.h
+		line:32		1
+		line:33		1
+		line:34		1
+		line:35		1
+			memcmp_ifunc_selector   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/wmemchr.c
+		line:31		2
+
+
+/build/glibc-S9d2JN/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/ifunc-avx2.h
+		line:30		10
+		line:32		10
+			wcslen_ifunc_selector   1
+			wcschr_ifunc_selector   2
+			wmemchr_ifunc_selector   2
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/rawmemchr.c
+		line:31		1
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/../sysdeps/unix/sysv/linux/dl-vdso.c
+		line:25		4
+		line:26		4
+		line:27		4
+		line:30		4
+		line:34		8
+		line:35		4
+		line:38		4
+		line:39		12
+		line:40		4
+		line:43		8
+		line:44		4
+		line:48		4
+			_dl_vdso_vsym   4
+
+
+/build/glibc-S9d2JN/glibc-2.27/time/../sysdeps/generic/dl-hash.h
+		line:43		1
+		line:44		2
+		line:45		10
+		line:48		8
+		line:62		8
+		line:67		2
+
+
+/build/glibc-S9d2JN/glibc-2.27/time/../sysdeps/unix/sysv/linux/x86/time.c
+		line:43		4
+			time_ifunc   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/strrchr.c
+		line:28		1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h
+		line:30		16
+		line:32		16
+			strchrnul_ifunc_selector   1
+			memchr_ifunc_selector   1
+			memrchr_ifunc_selector   1
+			strlen_ifunc_selector   1
+			strnlen_ifunc_selector   2
+			rawmemchr_ifunc_selector   1
+			strrchr_ifunc_selector   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/strcat.c
+		line:29		1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/strcasecmp.c
+		line:31		1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-strcasecmp.h
+		line:32		4
+			strncasecmp_l_ifunc_selector   1
+			strcasecmp_l_ifunc_selector   1
+			strncasecmp_ifunc_selector   1
+			strcasecmp_ifunc_selector   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/strncpy.c
+		line:29		1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-unaligned-ssse3.h
+		line:33		5
+			stpcpy_ifunc_selector   1
+			stpncpy_ifunc_selector   1
+			strcpy_ifunc_selector   1
+			strcat_ifunc_selector   1
+			strncpy_ifunc_selector   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-memmove.h
+		line:44		4
+		line:47		4
+		line:48		4
+		line:59		4
+		line:61		4
+			memcpy_ifunc_selector   1
+			mempcpy_ifunc_selector   1
+			memmove_ifunc_selector   2
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/../sysdeps/generic/ldsodefs.h
+		line:102		167
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/dl-reloc.c
+		line:148		6
+		line:155		3
+		line:158		2
+		line:159		6
+		line:163		6
+		line:164		3
+		line:170		3
+		line:176		3
+		line:177		3
+		line:180		3
+		line:187		6
+		line:231		6
+		line:258		18
+		line:261		3
+		line:285		3
+		line:288		3
+		line:305		3
+		line:307		3
+		line:313		6
+		line:316		6
+		line:320		3
+		line:321		3
+			_dl_protect_relro   3
+			_dl_relocate_object   3
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/../sysdeps/unix/sysv/linux/dl-osinfo.h
+		line:64		1
+		line:77		1
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/dl-version.c
+		line:37		9
+		line:38		5
+		line:39		14
+		line:57		3
+		line:65		3
+		line:71		3
+		line:87		3
+		line:88		3
+		line:90		3
+		line:95		10
+		line:109		10
+		line:111		3
+		line:114		5
+		line:121		7
+		line:125		7
+		line:143		4
+		line:156		4
+		line:157		4
+		line:165		4
+		line:171		4
+		line:173		4
+		line:175		8
+		line:176		8
+		line:178		8
+		line:181		4
+		line:185		4
+		line:201		4
+		line:209		2
+		line:214		4
+		line:218		6
+		line:220		3
+		line:222		6
+		line:225		3
+		line:228		3
+		line:233		1
+		line:237		2
+		line:251		6
+		line:254		3
+		line:257		36
+		line:260		36
+		line:264		33
+		line:268		4
+		line:273		4
+		line:274		4
+		line:275		8
+		line:285		4
+		line:288		12
+		line:290		12
+		line:293		2
+		line:297		2
+		line:300		3
+		line:302		3
+		line:304		12
+		line:305		9
+		line:306		6
+		line:307		3
+		line:310		3
+		line:315		1
+		line:318		2
+		line:328		4
+		line:331		3
+		line:335		33
+		line:337		36
+		line:341		33
+		line:342		99
+		line:343		99
+		line:344		33
+		line:347		36
+		line:351		33
+		line:357		4
+		line:362		2
+		line:364		1
+		line:366		9
+		line:368		8
+		line:371		1
+			match_symbol   3
+			_dl_check_map_versions   4
+			_dl_check_all_versions   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/dl-sort-maps.c
+		line:28		4
+		line:30		4
+		line:33		2
+		line:34		6
+		line:35		7
+		line:39		10
+		line:40		5
+		line:42		10
+		line:46		3
+		line:54		9
+		line:56		4
+		line:57		4
+		line:59		3
+		line:60		2
+		line:90		4
+		line:115		5
+		line:118		3
+		line:122		4
+			_dl_sort_maps   7
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/./dl-load.h
+		line:90		2
+		line:91		1
+		line:93		2
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/./dl-map-segments.h
+		line:50		2
+		line:56		4
+		line:60		2
+		line:63		2
+		line:64		2
+		line:66		2
+		line:73		1
+		line:80		1
+		line:90		2
+		line:92		1
+		line:94		2
+		line:104		2
+		line:110		2
+		line:111		1
+		line:112		3
+		line:113		2
+		line:120		1
+		line:123		1
+		line:131		1
+		line:137		1
+		line:141		1
+		line:144		1
+		line:149		2
+			_dl_map_segments   2
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/../sysdeps/posix/dl-fileid.h
+		line:37		3
+		line:40		1
+		line:41		2
+		line:49		3
+
+
+/build/glibc-S9d2JN/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c
+		line:27		1
+		line:28		1
+			__libc_read   2
+
+
+/build/glibc-S9d2JN/glibc-2.27/string/strdup.c
+		line:40		1
+		line:41		1
+		line:42		1
+		line:44		1
+		line:47		2
+		line:48		2
+			__strdup   2
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/../sysdeps/x86/dl-procinfo.h
+		line:39		2
+		line:42		1
+			_dl_string_platform   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/io/../sysdeps/unix/sysv/linux/close.c
+		line:27		2
+		line:28		2
+			__close   4
+
+
+/build/glibc-S9d2JN/glibc-2.27/misc/../sysdeps/unix/sysv/linux/mmap64.c
+		line:48		5
+		line:51		5
+		line:54		10
+		line:59		5
+		line:61		5
+			__mmap64   10
+
+
+/build/glibc-S9d2JN/glibc-2.27/io/../sysdeps/unix/sysv/linux/wordsize-64/fxstat.c
+		line:33		2
+		line:34		4
+		line:35		2
+		line:39		2
+			__GI___fxstat   4
+
+
+/build/glibc-S9d2JN/glibc-2.27/io/../sysdeps/unix/sysv/linux/open64.c
+		line:36		2
+		line:39		4
+		line:47		2
+		line:49		2
+			__libc_open64   4
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/dl-cache.c
+		line:141		8
+		line:142		40
+		line:144		39
+		line:146		1
+		line:152		3
+		line:153		3
+		line:154		2
+		line:156		2
+		line:158		1
+		line:164		38
+		line:166		38
+		line:167		7
+		line:170		31
+		line:171		31
+		line:174		1
+		line:187		1
+		line:195		1
+		line:198		1
+		line:201		2
+		line:209		2
+		line:210		1
+		line:214		1
+		line:217		2
+		line:220		2
+		line:221		2
+		line:222		1
+		line:243		1
+		line:249		1
+		line:258		2
+		line:260		1
+		line:264		3
+		line:266		1
+		line:270		4
+		line:271		1
+		line:285		12
+		line:297		2
+		line:301		1
+		line:305		1
+		line:313		2
+		line:314		2
+		line:315		1
+		line:316		1
+		line:325		1
+		line:326		1
+		line:328		1
+		line:329		1
+		line:331		1
+			_dl_unload_cache   2
+			_dl_cache_libcmp   8
+			_dl_load_cache_lookup   4
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/dl-misc.c
+		line:44		3
+		line:47		3
+		line:48		1
+		line:50		2
+		line:52		2
+		line:55		2
+		line:57		2
+		line:68		1
+		line:71		1
+		line:282		22
+		line:283		44
+		line:284		25
+		line:286		22
+		line:288		44
+		line:289		25
+		line:292		22
+		line:294		19
+		line:295		25
+			_dl_sysdep_read_whole_file   1
+			_dl_name_match_p   69
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/dl-error-skeleton.c
+		line:175		6
+		line:187		2
+		line:188		4
+		line:190		4
+		line:191		4
+		line:194		6
+		line:196		2
+		line:197		4
+		line:198		6
+		line:207		2
+		line:226		1
+		line:227		1
+		line:228		1
+		line:231		1
+		line:232		1
+		line:234		1
+		line:236		1
+		line:237		1
+		line:238		1
+			_dl_receive_error   1
+			_dl_catch_exception   4
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/dl-deps.c
+		line:60		2
+		line:63		8
+		line:64		4
+		line:67		2
+		line:68		2
+		line:143		1
+		line:144		1
+		line:145		2
+		line:147		1
+		line:151		3
+		line:158		5
+		line:159		8
+		line:175		3
+		line:179		1
+		line:185		1
+		line:186		1
+		line:198		2
+		line:199		1
+		line:200		1
+		line:206		3
+		line:209		3
+		line:213		6
+		line:214		3
+		line:216		1
+		line:218		1
+		line:220		1
+		line:225		3
+		line:227		4
+		line:232		2
+		line:233		2
+		line:234		2
+		line:235		2
+		line:238		54
+		line:239		48
+		line:245		4
+		line:247		2
+		line:249		4
+		line:250		2
+		line:259		2
+		line:261		2
+		line:266		4
+		line:269		2
+		line:270		2
+		line:271		2
+		line:272		4
+		line:274		2
+		line:276		2
+		line:280		2
+		line:281		1
+		line:283		46
+		line:288		1
+		line:304		3
+		line:434		3
+		line:436		1
+		line:438		2
+		line:439		1
+		line:440		2
+		line:443		1
+		line:444		2
+		line:445		1
+		line:448		1
+		line:449		1
+		line:453		5
+		line:455		3
+		line:456		3
+		line:460		1
+		line:461		1
+		line:464		1
+		line:474		2
+		line:475		1
+		line:477		2
+		line:482		1
+		line:483		1
+		line:485		4
+		line:491		3
+		line:495		3
+		line:498		1
+		line:549		1
+		line:550		1
+		line:551		2
+		line:573		2
+		line:586		1
+		line:590		1
+		line:593		1
+		line:595		2
+		line:596		1
+		line:597		2
+		line:604		1
+		line:607		1
+		line:610		1
+			openaux   2
+			_dl_map_object_deps   4
+
+
+/build/glibc-S9d2JN/glibc-2.27/io/../sysdeps/unix/sysv/linux/access.c
+		line:27		1
+		line:31		1
+			__access   2
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/../elf/dl-tls.c
+		line:51		1
+		line:99		1
+		line:103		1
+		line:113		1
+		line:114		1
+		line:135		1
+		line:136		1
+		line:137		1
+		line:138		1
+		line:141		2
+		line:144		1
+		line:178		1
+		line:180		4
+		line:182		1
+		line:184		2
+		line:185		2
+		line:187		1
+		line:189		2
+		line:205		3
+		line:207		1
+		line:208		1
+		line:217		1
+		line:220		1
+		line:221		1
+		line:272		1
+		line:273		3
+		line:285		1
+		line:286		2
+		line:287		1
+		line:290		1
+		line:296		1
+		line:332		2
+		line:334		1
+		line:345		1
+		line:346		1
+		line:347		1
+		line:355		2
+		line:356		1
+		line:360		1
+		line:379		1
+		line:385		1
+		line:437		2
+		line:438		2
+		line:442		2
+		line:444		1
+		line:445		1
+		line:448		2
+		line:460		2
+		line:465		2
+		line:471		2
+		line:474		1
+		line:475		1
+		line:481		1
+		line:482		2
+		line:484		5
+		line:485		1
+		line:487		2
+		line:488		2
+		line:491		1
+		line:492		1
+		line:494		1
+		line:495		1
+		line:504		1
+		line:507		2
+		line:517		1
+		line:521		1
+		line:524		1
+		line:887		1
+		line:893		1
+		line:896		1
+		line:901		1
+		line:942		1
+		line:943		1
+		line:944		1
+			__GI__dl_allocate_tls_init   3
+			_dl_add_to_slotinfo   1
+			_dl_allocate_tls_storage   1
+			_dl_determine_tlsoffset   1
+			_dl_next_tls_modid   1
+			_dl_count_modids   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/dl-debug.c
+		line:49		3
+		line:50		3
+		line:54		3
+		line:57		1
+		line:58		5
+		line:59		3
+		line:60		1
+		line:64		1
+		line:74		2
+			__GI__dl_debug_state   2
+			_dl_debug_initialize   3
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/../sysdeps/x86/dl-hwcap.h
+		line:57		1
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/../sysdeps/unix/sysv/linux/not-errno.h
+		line:28		3
+		line:32		1
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/dl-hwcaps.c
+		line:42		3
+		line:43		5
+		line:46		1
+		line:55		5
+		line:56		2
+		line:57		4
+		line:65		1
+		line:67		1
+		line:69		6
+		line:70		4
+		line:72		2
+		line:81		1
+		line:82		1
+		line:83		1
+		line:84		1
+		line:96		1
+		line:97		6
+		line:104		3
+		line:118		3
+		line:119		4
+		line:129		1
+		line:131		1
+		line:146		2
+		line:147		1
+		line:149		1
+		line:166		1
+		line:183		5
+		line:184		2
+		line:186		1
+		line:187		2
+		line:188		4
+		line:191		1
+		line:193		1
+		line:194		1
+		line:198		2
+		line:199		1
+		line:202		2
+		line:205		1
+		line:209		2
+		line:210		2
+		line:212		1
+		line:213		2
+		line:214		2
+		line:215		1
+		line:222		1
+		line:228		1
+		line:229		2
+		line:230		2
+		line:259		1
+		line:262		1
+		line:265		1
+		line:269		1
+		line:272		2
+		line:275		4
+		line:278		6
+		line:279		4
+		line:280		2
+		line:283		4
+		line:285		4
+		line:290		9
+		line:291		8
+		line:295		3
+		line:298		24
+		line:299		36
+		line:300		24
+		line:302		3
+		line:305		2
+		line:306		2
+		line:307		6
+		line:309		2
+		line:310		1
+		line:313		2
+		line:320		8
+		line:321		4
+		line:323		4
+		line:326		1
+		line:328		2
+		line:329		1
+			_dl_important_hwcaps   8
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/dl-load.c
+		line:230		6
+		line:233		4
+		line:236		2
+		line:237		2
+		line:256		2
+		line:424		1
+		line:656		3
+		line:665		1
+		line:678		2
+		line:691		3
+		line:695		1
+		line:696		2
+		line:697		2
+		line:704		2
+		line:705		2
+		line:708		2
+		line:710		2
+		line:716		1
+		line:717		1
+		line:719		1
+		line:725		3
+		line:727		8
+		line:728		4
+		line:730		5
+		line:731		8
+		line:732		7
+		line:735		6
+		line:736		8
+		line:739		7
+		line:745		1
+		line:746		1
+		line:750		1
+		line:751		1
+		line:753		1
+		line:755		1
+		line:772		1
+		line:774		2
+		line:788		1
+		line:793		1
+		line:824		1
+		line:825		1
+		line:863		3
+		line:873		4
+		line:874		1
+		line:889		5
+		line:890		3
+		line:907		1
+		line:931		1
+		line:941		1
+		line:963		1
+		line:995		1
+		line:998		2
+		line:999		2
+		line:1010		2
+		line:1011		4
+		line:1012		2
+		line:1014		2
+		line:1015		2
+		line:1016		1
+		line:1031		2
+		line:1033		1
+		line:1035		2
+		line:1036		1
+		line:1037		1
+		line:1043		11
+		line:1044		10
+		line:1050		1
+		line:1055		1
+		line:1056		1
+		line:1061		1
+		line:1062		1
+		line:1067		2
+		line:1072		2
+		line:1080		4
+		line:1081		4
+		line:1082		8
+		line:1083		2
+		line:1084		4
+		line:1085		4
+		line:1089		4
+		line:1090		1
+		line:1094		4
+		line:1095		6
+		line:1105		2
+		line:1108		1
+		line:1112		1
+		line:1113		2
+		line:1114		2
+		line:1115		1
+		line:1117		1
+		line:1118		2
+		line:1121		1
+		line:1125		1
+		line:1131		2
+		line:1132		1
+		line:1140		3
+		line:1147		1
+		line:1148		1
+		line:1151		1
+		line:1152		1
+		line:1153		1
+		line:1156		1
+		line:1165		2
+		line:1175		4
+		line:1187		1
+		line:1196		2
+		line:1203		1
+		line:1218		1
+		line:1237		1
+		line:1239		1
+		line:1293		1
+		line:1294		1
+		line:1297		2
+		line:1306		1
+		line:1308		2
+		line:1310		2
+		line:1326		1
+		line:1330		1
+		line:1331		1
+		line:1348		1
+		line:1352		1
+		line:1357		2
+		line:1367		1
+		line:1377		1
+		line:1381		1
+		line:1401		1
+		line:1653		2
+		line:1692		2
+		line:1723		2
+		line:1725		2
+		line:1730		1
+		line:1736		1
+		line:1737		1
+		line:1742		2
+		line:1744		1
+		line:1746		2
+		line:1748		2
+		line:1754		1
+		line:1770		1
+		line:1844		1
+		line:1849		1
+		line:1851		1
+		line:1857		1
+		line:1868		1
+		line:1874		2
+		line:1875		2
+		line:1876		1
+		line:1896		6
+		line:1898		6
+		line:1911		1
+		line:1914		1
+		line:1915		1
+		line:1939		2
+		line:1941		1
+		line:1942		2
+		line:1945		2
+		line:1950		1
+		line:1951		1
+		line:1954		1
+		line:1957		2
+		line:1958		3
+		line:1959		1
+		line:1960		1
+		line:1961		2
+		line:1985		2
+		line:1989		1
+		line:2151		4
+		line:2153		1
+		line:2159		4
+		line:2160		2
+		line:2163		6
+		line:2168		5
+		line:2170		10
+		line:2174		4
+		line:2175		4
+		line:2178		2
+		line:2179		4
+		line:2180		4
+		line:2196		1
+		line:2206		1
+		line:2240		1
+		line:2242		2
+		line:2246		2
+		line:2248		2
+		line:2255		1
+		line:2259		2
+		line:2260		1
+		line:2264		1
+		line:2267		1
+		line:2279		1
+		line:2280		1
+		line:2290		1
+		line:2297		1
+		line:2306		1
+		line:2320		2
+		line:2322		1
+		line:2326		2
+		line:2328		2
+		line:2332		1
+		line:2340		1
+		line:2363		2
+		line:2367		2
+		line:2368		1
+		line:2385		1
+		line:2413		1
+		line:2415		1
+		line:2459		2
+		line:2460		3
+		line:2462		2
+			_dl_map_object_from_fd   1
+			open_verify   1
+			_dl_map_object   6
+			_dl_dst_count   4
+			_dl_init_paths   5
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/setup-vdso.h
+		line:24		1
+		line:32		2
+		line:34		2
+		line:38		2
+		line:39		1
+		line:40		2
+		line:41		8
+		line:44		4
+		line:46		2
+		line:47		2
+		line:49		3
+		line:51		1
+		line:52		1
+		line:53		1
+		line:54		1
+		line:55		1
+		line:56		1
+		line:57		1
+		line:61		2
+		line:63		1
+		line:64		2
+		line:65		1
+		line:66		1
+		line:67		3
+		line:69		1
+		line:70		1
+		line:73		1
+		line:79		2
+		line:80		2
+		line:86		1
+		line:90		1
+		line:91		1
+		line:92		1
+		line:93		1
+		line:94		1
+		line:96		1
+		line:100		1
+		line:104		1
+		line:105		1
+		line:106		1
+		line:107		2
+		line:108		2
+		line:114		1
+			setup_vdso   2
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/dl-minimal.c
+		line:49		1
+		line:50		18
+		line:55		2
+		line:56		2
+		line:57		1
+		line:61		36
+		line:64		36
+		line:69		1
+		line:70		1
+		line:72		1
+		line:73		1
+		line:75		1
+		line:77		1
+		line:79		2
+		line:82		18
+		line:83		18
+		line:85		18
+		line:92		9
+		line:96		9
+		line:99		9
+		line:100		18
+		line:103		9
+		line:111		1
+			free   1
+			malloc   9
+			calloc   9
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/dl-object.c
+		line:31		6
+		line:33		6
+		line:35		5
+		line:38		4
+		line:40		2
+		line:42		2
+		line:45		1
+		line:46		6
+		line:47		6
+		line:48		6
+		line:50		6
+		line:51		6
+		line:59		6
+		line:60		12
+		line:66		12
+		line:68		3
+		line:73		9
+		line:76		6
+		line:79		3
+		line:80		9
+		line:84		6
+		line:85		21
+		line:87		3
+		line:95		15
+		line:96		9
+		line:99		6
+		line:100		4
+		line:101		3
+		line:105		3
+		line:108		22
+		line:110		16
+		line:120		6
+		line:121		3
+		line:124		1
+		line:126		9
+		line:128		4
+		line:131		6
+		line:135		1
+		line:139		4
+		line:141		1
+		line:147		2
+		line:150		6
+		line:153		6
+		line:155		3
+		line:159		2
+		line:163		2
+		line:164		2
+		line:172		1
+		line:176		1
+		line:209		11
+		line:214		11
+		line:215		22
+		line:220		1
+		line:223		1
+		line:227		3
+			_dl_add_to_namespace_list   3
+			_dl_new_object   11
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/dl-environ.c
+		line:29		1
+		line:32		32
+		line:34		31
+		line:35		13
+		line:45		31
+		line:49		1
+			_dl_next_ld_env_entry   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/../misc/sbrk.c
+		line:32		1
+		line:40		1
+		line:44		1
+		line:60		1
+			__sbrk   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/../sysdeps/unix/sysv/linux/x86_64/brk.c
+		line:31		1
+		line:33		1
+		line:39		1
+		line:40		1
+			__brk   2
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/../sysdeps/unix/sysv/linux/dl-sysdep.c
+		line:35		1
+		line:45		1
+		line:47		1
+		line:57		1
+		line:59		4
+		line:60		3
+		line:62		2
+		line:64		1
+		line:65		4
+		line:67		1
+		line:68		1
+		line:132		1
+			_dl_discover_osversion   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/dl-tunables.h
+		line:120		308
+		line:121		339
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/dl-tunables.c
+		line:68		32
+		line:71		31
+		line:74		62
+		line:78		31
+		line:83		62
+		line:150		1
+		line:280		1
+		line:289		1
+		line:297		62
+		line:312		682
+		line:318		682
+		line:330		31
+		line:364		1
+		line:373		12
+		line:377		12
+		line:399		6
+		line:401		6
+			__GI___tunable_get_val   6
+			__GI___tunables_init   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/../sysdeps/x86/cpu-features.c
+		line:37		1
+		line:38		1
+		line:39		1
+		line:48		1
+		line:52		1
+		line:55		3
+		line:58		1
+		line:59		3
+		line:60		1
+		line:61		1
+		line:62		1
+		line:63		1
+		line:70		1
+		line:71		1
+		line:78		1
+		line:82		1
+		line:84		1
+		line:88		1
+		line:91		2
+		line:94		2
+		line:96		1
+		line:98		1
+		line:100		1
+		line:105		1
+		line:124		1
+		line:128		1
+		line:129		1
+		line:131		1
+		line:132		1
+		line:135		2
+		line:137		1
+		line:139		2
+		line:142		1
+		line:148		2
+		line:149		1
+		line:151		1
+		line:154		30
+		line:156		31
+		line:158		6
+		line:159		5
+		line:164		25
+		line:167		60
+		line:170		25
+		line:171		29
+		line:172		4
+		line:174		4
+		line:179		1
+		line:181		1
+		line:184		1
+		line:186		1
+		line:192		1
+		line:198		1
+		line:199		1
+		line:210		3
+		line:213		2
+		line:217		1
+		line:219		1
+		line:224		1
+		line:226		2
+		line:227		2
+		line:273		1
+		line:295		1
+		line:305		2
+		line:327		1
+		line:334		1
+		line:381		1
+		line:382		1
+		line:385		1
+		line:386		1
+		line:392		1
+		line:393		1
+		line:394		1
+		line:397		3
+		line:399		3
+		line:401		3
+		line:403		4
+		line:414		1
+		line:415		2
+		line:419		1
+		line:438		1
+		line:440		1
+		line:441		1
+		line:443		1
+		line:444		1
+		line:447		1
+			get_common_indeces   1
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/../elf/dl-sysdep.c
+		line:88		1
+		line:89		1
+		line:90		1
+		line:112		1
+		line:113		3
+		line:116		2
+		line:117		1
+		line:119		33
+		line:120		20
+		line:123		1
+		line:126		1
+		line:129		1
+		line:130		1
+		line:132		1
+		line:133		1
+		line:153		1
+		line:154		1
+		line:156		1
+		line:157		1
+		line:159		2
+		line:160		1
+		line:162		2
+		line:163		1
+		line:165		2
+		line:166		1
+		line:177		2
+		line:178		1
+		line:181		2
+		line:182		1
+		line:224		1
+		line:236		1
+		line:238		2
+		line:250		1
+		line:253		1
+		line:254		1
+		line:255		1
+		line:260		1
+			_dl_sysdep_start_cleanup   1
+			_dl_sysdep_start   2
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/dl-lookup.c
+		line:78		82
+		line:90		414
+		line:93		82
+		line:97		82
+		line:98		164
+		line:100		82
+		line:119		82
+		line:120		82
+		line:121		82
+		line:180		1
+		line:294		95
+		line:338		172
+		line:339		86
+		line:344		86
+		line:345		86
+		line:349		177
+		line:352		177
+		line:356		349
+		line:360		177
+		line:364		177
+		line:370		177
+		line:374		83
+		line:375		83
+		line:378		177
+		line:379		177
+		line:382		177
+		line:383		177
+		line:385		177
+		line:386		172
+		line:387		177
+		line:390		354
+		line:393		177
+		line:396		83
+		line:397		83
+		line:398		83
+		line:400		166
+		line:403		175
+		line:405		82
+		line:406		82
+		line:407		82
+		line:413		93
+		line:421		86
+		line:446		1
+		line:452		82
+		line:503		82
+		line:506		82
+		line:510		9
+		line:522		82
+		line:524		82
+		line:540		95
+		line:541		20
+		line:544		95
+		line:547		4
+		line:548		86
+		line:554		86
+		line:555		2602
+		line:556		2430
+		line:790		172
+		line:792		172
+		line:793		172
+		line:796		86
+		line:800		172
+		line:804		86
+		line:805		86
+		line:811		90
+		line:813		86
+		line:816		86
+		line:819		4
+		line:841		86
+		line:843		4
+		line:860		4
+		line:861		4
+		line:865		82
+		line:896		82
+		line:905		82
+		line:919		82
+		line:920		1
+		line:922		82
+		line:927		82
+		line:929		90
+		line:939		4
+		line:943		4
+		line:947		4
+		line:948		4
+		line:949		4
+		line:951		4
+		line:952		4
+		line:953		12
+		line:955		4
+		line:956		8
+		line:958		4
+		line:960		12
+		line:961		4
+			check_match   100
+			do_lookup_x   86
+			_dl_lookup_symbol_x   86
+			_dl_setup_hash   4
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/do-rel.h
+		line:47		18
+		line:48		6
+		line:50		4
+		line:51		4
+		line:58		18
+		line:61		47
+		line:63		46
+		line:65		39
+		line:74		1
+		line:75		45
+		line:76		39
+		line:83		6
+		line:84		6
+		line:86		5
+		line:98		10
+		line:108		3
+		line:111		3845
+		line:112		1280
+		line:116		1
+		line:118		5
+		line:121		5
+		line:124		123
+		line:127		102
+		line:136		231
+		line:137		324
+		line:138		348
+		line:139		222
+		line:143		3
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/../sysdeps/x86_64/dl-machine.h
+		line:59		1
+		line:76		6
+		line:82		1
+		line:86		1
+		line:92		1
+		line:100		2
+		line:120		1
+		line:122		1
+		line:124		1
+		line:131		2
+		line:276		204
+		line:297		102
+		line:301		129
+		line:308		515
+		line:310		201
+		line:313		214
+		line:335		112
+		line:354		9
+		line:422		1
+		line:430		17
+		line:434		17
+		line:439		34
+		line:448		34
+		line:458		85
+		line:481		3
+		line:491		6
+		line:535		2482
+		line:540		1280
+		line:541		3840
+		line:551		85
+		line:555		7
+		line:557		7
+		line:558		7
+		line:575		39
+		line:577		39
+		line:578		39
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/get-dynamic-info.h
+		line:33		1
+		line:42		5
+		line:46		3
+		line:48		87
+		line:50		78
+		line:63		26
+		line:64		76
+		line:65		4
+		line:67		5
+		line:68		8
+		line:70		5
+		line:71		8
+		line:72		4
+		line:73		8
+		line:74		78
+		line:81		4
+		line:101		4
+		line:102		4
+		line:103		4
+		line:104		4
+		line:106		4
+		line:111		4
+		line:112		4
+		line:113		4
+		line:119		4
+		line:124		2
+		line:131		4
+		line:132		3
+		line:140		1
+		line:143		1
+		line:147		1
+		line:148		1
+		line:150		3
+		line:155		6
+		line:157		6
+		line:158		1
+		line:159		3
+		line:161		3
+		line:162		1
+		line:164		3
+		line:166		1
+		line:174		2
+		line:179		1
+		line:180		1
+		line:182		3
+
+
+/build/glibc-S9d2JN/glibc-2.27/elf/rtld.c
+		line:393		2
+		line:394		1
+		line:395		1
+		line:396		1
+		line:397		1
+		line:405		3
+		line:408		1
+		line:414		4
+		line:423		1
+		line:426		2
+		line:430		2
+		line:444		1
+		line:463		2
+		line:486		1
+		line:489		1
+		line:500		1
+		line:505		1
+		line:507		1
+		line:532		1
+		line:621		1
+		line:623		2
+		line:627		1
+		line:681		1
+		line:683		1
+		line:687		2
+		line:693		2
+		line:696		1
+		line:697		1
+		line:702		1
+		line:704		1
+		line:708		2
+		line:709		1
+		line:710		6
+		line:711		4
+		line:712		4
+		line:716		2
+		line:718		1
+		line:720		1
+		line:723		1
+		line:730		2
+		line:731		2
+		line:737		2
+		line:740		2
+		line:743		1
+		line:745		1
+		line:746		1
+		line:784		4
+		line:785		4
+		line:790		4
+		line:791		4
+		line:799		1
+		line:801		1
+		line:810		1
+		line:812		1
+		line:817		1
+		line:870		3
+		line:876		1
+		line:879		1
+		line:885		1
+		line:887		2
+		line:891		2
+		line:892		2
+		line:897		2
+		line:907		1
+		line:1108		2
+		line:1110		2
+		line:1111		1
+		line:1112		2
+		line:1113		1
+		line:1117		2
+		line:1118		1
+		line:1139		1
+		line:1140		1
+		line:1142		1
+		line:1144		1
+		line:1147		11
+		line:1148		9
+		line:1152		1
+		line:1153		1
+		line:1157		1
+		line:1158		1
+		line:1166		2
+		line:1167		1
+		line:1169		1
+		line:1176		2
+		line:1188		1
+		line:1194		1
+		line:1202		4
+		line:1203		6
+		line:1204		2
+		line:1205		1
+		line:1208		2
+		line:1209		2
+		line:1210		2
+		line:1211		2
+		line:1212		1
+		line:1239		1
+		line:1240		1
+		line:1243		1
+		line:1244		1
+		line:1245		1
+		line:1250		1
+		line:1253		1
+		line:1255		1
+		line:1257		1
+		line:1270		1
+		line:1271		2
+		line:1273		2
+		line:1276		2
+		line:1278		1
+		line:1279		1
+		line:1281		2
+		line:1282		1
+		line:1286		1
+		line:1288		1
+		line:1293		1
+		line:1296		1
+		line:1318		2
+		line:1323		1
+		line:1326		2
+		line:1328		1
+		line:1333		2
+		line:1336		1
+		line:1337		2
+		line:1338		1
+		line:1339		1
+		line:1340		1
+		line:1341		1
+		line:1346		2
+		line:1347		1
+		line:1364		1
+		line:1365		1
+		line:1367		1
+		line:1369		1
+		line:1370		2
+		line:1375		1
+		line:1376		1
+		line:1378		1
+		line:1379		1
+		line:1384		1
+		line:1389		1
+		line:1390		1
+		line:1391		2
+		line:1570		2
+		line:1578		1
+		line:1581		1
+		line:1585		1
+		line:1590		1
+		line:1591		1
+		line:1592		1
+		line:1596		1
+		line:1611		1
+		line:1612		1
+		line:1613		1
+		line:1615		2
+		line:1631		2
+		line:1708		2
+		line:1725		3
+		line:1726		3
+		line:1727		1
+		line:1729		1
+		line:1732		5
+		line:1733		3
+		line:1736		1
+		line:1737		1
+		line:1738		1
+		line:1740		2
+		line:1741		2
+		line:1751		1
+		line:1753		2
+		line:1754		2
+		line:1756		2
+		line:1758		1
+		line:1760		2
+		line:1762		1
+		line:1774		1
+		line:1775		1
+		line:1776		1
+		line:1787		2
+		line:1788		1
+		line:1789		2
+		line:1799		2
+		line:1800		2
+		line:1801		2
+		line:1803		1
+		line:1808		1
+		line:2038		1
+		line:2094		2
+		line:2098		2
+		line:2104		2
+		line:2107		2
+		line:2161		1
+		line:2168		1
+		line:2170		2
+		line:2171		1
+		line:2172		7
+		line:2174		6
+		line:2179		3
+		line:2181		4
+		line:2183		1
+		line:2184		1
+		line:2187		3
+		line:2189		3
+		line:2190		2
+		line:2194		3
+		line:2195		2
+		line:2197		1
+		line:2199		2
+		line:2205		2
+		line:2210		1
+		line:2212		1
+		line:2219		1
+		line:2222		1
+		line:2231		1
+		line:2233		1
+		line:2248		4
+		line:2250		1
+		line:2251		3
+		line:2252		1
+		line:2254		1
+		line:2262		1
+		line:2266		1
+		line:2286		2
+		line:2287		1
+		line:2288		1
+		line:2289		1
+		line:2293		1
+		line:2298		1
+		line:2464		1
+		line:2466		1
+		line:2467		1
+		line:2471		4
+		line:2473		2
+		line:2635		1
+		line:2667		1
+			rtld_lock_default_unlock_recursive   1
+			init_tls   2
+			version_check_doit   1
+			rtld_lock_default_lock_recursive   4
+			dl_main   2
+

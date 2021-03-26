@@ -320,7 +320,7 @@ static int pt_insn_start(struct pt_insn_decoder *decoder, int status)
 	 * indication before decoding the current instruction.
 	 *
 	 * We do this already here so we can indicate user-events that precede
-	 * the first instruction.
+	 * the first instruction.cpplib_shared.so
 	 */
 	return pt_insn_check_ip_event(decoder, NULL, NULL);
 }
@@ -489,7 +489,6 @@ static int check_erratum_skd022(struct pt_insn_decoder *decoder)
 		return 1;
 	}
 }
-
 static inline int handle_erratum_skd022(struct pt_insn_decoder *decoder)
 {
 	struct pt_event *ev;

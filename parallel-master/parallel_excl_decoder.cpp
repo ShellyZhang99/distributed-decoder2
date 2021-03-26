@@ -104,6 +104,8 @@ using namespace std;
         uint64_t offset, sync, time;
 
         int status;
+        if(!this->insn)
+            return -1;
         ptdec = this->insn;
         offset = 0ull;
         sync = 0ull;
@@ -157,12 +159,12 @@ using namespace std;
                      * in decoding the current instruction.
                     */
                     if (temp_insn.iclass != ptic_error){
-                        pt_profiler_add(profiler, excl_profiler, &temp_insn);
+                        pt_profiler_add(this->profiler, excl_profiler, &temp_insn);
                     }
 
                     break;
                 }
-                pt_profiler_add(profiler, excl_profiler, &temp_insn);
+                pt_profiler_add(this->profiler, excl_profiler, &temp_insn);
 
             }
 
@@ -186,7 +188,7 @@ using namespace std;
     {
         decode_insn();
         struct sourcefile *source = profiler->source_list;
-        string dest;
+        string dest = "";
         while(source){
         dest.append("\n\n");
         dest.append(source->filename);
