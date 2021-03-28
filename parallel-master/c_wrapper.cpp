@@ -22,15 +22,15 @@ Parallel_decoder *Parallel_decoder_ctor()
     return new Parallel_decoder();
 }
 
-extern "C" DLL_EXPORT Parallel_excl_decoder *Parallel_excl_decoder_get(Parallel_decoder *dec, int i);
-Parallel_excl_decoder *Parallel_excl_decoder_get(Parallel_decoder *dec, int i)
+extern "C" DLL_EXPORT Parallel_excl_decoder *Parallel_excl_decoder_get(Parallel_decoder *decoder, int i);
+Parallel_excl_decoder *Parallel_excl_decoder_get(Parallel_decoder *decoder, int i)
 {
-    return &dec->excl_decoder[i];
+    return &decoder->excl_decoder[i];
 }
 
-extern "C" DLL_EXPORT  int Parallel_decoder_add_excl_decoder(Parallel_decoder *self, char *config_filename, int primary, char* pt_filename)
+extern "C" DLL_EXPORT  int Parallel_decoder_add_excl_decoder(Parallel_decoder *decoder, char *config_filename, int primary, char* pt_filename)
 {
-    return self->add_excl_decoder(config_filename, primary, pt_filename);
+    return decoder->add_excl_decoder(config_filename, primary, pt_filename);
 }
 
 extern "C" DLL_EXPORT Parallel_excl_decoder *Parallel_excl_decoder_ctor();
@@ -39,7 +39,39 @@ Parallel_excl_decoder *Parallel_excl_decoder_ctor()
     return new Parallel_excl_decoder();
 }
 
-extern "C" DLL_EXPORT  string Parallel_excl_decoder_decode(Parallel_excl_decoder *self)
+extern "C" DLL_EXPORT  int Parallel_excl_decoder_decodePara(Parallel_excl_decoder* excl_decoder)
 {
-    return self->decode();
+    return excl_decoder->decode();
 }
+
+extern "C" int decode2(int i)
+{
+    int cpunum = i/8;
+    int peventnum = i%8;
+    Parallel_decoder *decoder = Parallel_decoder_ctor();
+    string a = "testFile/perf.data-aux-idx";
+    char num = '0'+cpunum;
+    a += num;
+
+    a.append(".bin");
+    char* str = (char*)a.data();
+    string a2 = "testFile/perf-attr-config";
+    char *str2 =  (char*)a2.data();
+    Parallel_decoder_add_excl_decoder(decoder, str2, cpunum, str);
+    Parallel_excl_decoder *para_decoder = Parallel_excl_decoder_get(decoder, peventnum);
+    return  Parallel_excl_decoder_decodePara(para_decoder);
+}
+
+
+
+extern "C" DLL_EXPORT  int Parallel_excl_decoder_decode(Parallel_excl_decoder* excl_decoder, int i)
+{
+    ofstream outfile;
+    outfile.open("outputFile2.txt");
+
+    outfile<<i<<endl;
+    outfile.close();
+    return decode2(i);
+}
+
+

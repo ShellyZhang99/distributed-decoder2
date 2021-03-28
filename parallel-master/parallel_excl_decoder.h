@@ -45,7 +45,7 @@ public:
 
     int decode_insn();
 
-    string decode();
+    int decode();
 };
 
 #endif

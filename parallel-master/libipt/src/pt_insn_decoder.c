@@ -49,7 +49,7 @@ static void pt_insn_reset(struct pt_insn_decoder *decoder)
 		return;
 
 	decoder->mode = ptem_unknown;
-	decoder->ip = 0ull;
+	decoder->ip = 0;
 	decoder->status = 0;
 	decoder->enabled = 0;
 	decoder->process_event = 0;
@@ -332,7 +332,7 @@ int pt_insn_sync_forward(struct pt_insn_decoder *decoder)
 	if (!decoder)
 		return -pte_invalid;
 
-	pt_insn_reset(decoder);
+    pt_insn_reset(decoder);
 
 	status = pt_qry_sync_forward(&decoder->query, &decoder->ip);
 

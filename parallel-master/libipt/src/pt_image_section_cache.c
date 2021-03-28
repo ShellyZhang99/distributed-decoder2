@@ -237,7 +237,7 @@ static int pt_iscache_lru_prune(struct pt_image_section_cache *iscache,
 		return -pte_internal;
 
 	limit = iscache->limit;
-	used = 0ull;
+	used = 0;
 
 	pnext = &iscache->lru;
 	for (lru = *pnext; lru; pnext = &lru->next, lru = *pnext) {
@@ -443,7 +443,7 @@ static int pt_iscache_lru_clear(struct pt_image_section_cache *iscache)
 
 	lru = iscache->lru;
 	iscache->lru = NULL;
-	iscache->used = 0ull;
+	iscache->used = 0;
 
 	errcode = pt_iscache_unlock(iscache);
 	if (errcode < 0)
@@ -835,7 +835,7 @@ int pt_iscache_clear(struct pt_image_section_cache *iscache)
 	iscache->capacity = 0;
 	iscache->size = 0;
 	iscache->lru = NULL;
-	iscache->used = 0ull;
+	iscache->used = 0;
 
 	errcode = pt_iscache_unlock(iscache);
 	if (errcode < 0)

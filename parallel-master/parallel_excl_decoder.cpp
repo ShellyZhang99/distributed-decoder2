@@ -7,6 +7,7 @@
 #include <inttypes.h>
 #include <errno.h>
 #include <time.h>
+#include <fstream>
 using namespace std;
 
 
@@ -184,31 +185,35 @@ using namespace std;
     }
 
 ///gaixie func
-    string Parallel_excl_decoder::decode()
+    int Parallel_excl_decoder::decode()
     {
-        decode_insn();
-        struct sourcefile *source = profiler->source_list;
-        string dest = "";
-        while(source){
-        dest.append("\n\n");
-        dest.append(source->filename);
-        dest.append("\n");
-            //dest = dest+ "\n\n"+source->filename + "\n";
-            //printf("%s\n", source->filename);
-            for (int i = 0; i < source->vol; i++){
-                if (source->cnt[i])
-                    dest=dest+"\t\tline:"+to_string(i)+"\t\t"+to_string(source->cnt[i])+"\n";
-                    //printf("\t\tline:%d\t\t%d\n",i, source->cnt[i]);
-            }
-            struct function *func = source->func_list;
-            while(func){
-                dest=dest+"\t\t\t"+func->functionname+"   "+to_string(func->cnt)+"\n";
-                //printf("\t\t\t%s:  %d\n", func->functionname, func->cnt);
-                func = func->next;
-            }
-            source = source->next;
-        }
-        return dest;
+        int result = decode_insn();
+       ofstream outfile;
+                   string fileName = "outputFileTemp";
+                   outfile.open("outputFileTemp.txt");
+               struct sourcefile *source = profiler->source_list;
+               while(source){
+               outfile<<"\n\n";
+               outfile<<source->filename;
+               outfile<<"\n";
+                   //dest = dest+ "\n\n"+source->filename + "\n";
+                   printf("%s\n", source->filename);
+                   for (int i = 0; i < source->vol; i++){
+                       if (source->cnt[i])
+                          outfile<<"\t\tline:"<<i<<"\t\t"<<source->cnt[i]<<"\n";
+                           printf("\t\tline:%d\t\t%d\n",i, source->cnt[i]);
+                   }
+                   struct function *func = source->func_list;
+                   while(func){
+                       outfile<< "\t\t\t"<<func->functionname<<"   "<<to_string(func->cnt)<<"\n";
+                       printf("\t\t\t%s:  %d\n", func->functionname, func->cnt);
+                       func = func->next;
+                   }
+                   source = source->next;
+               }
+
+                   outfile.close();
+        return result;
     }
 
 

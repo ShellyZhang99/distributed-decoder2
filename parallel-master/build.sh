@@ -16,11 +16,11 @@ mv *.o ../
 cd ..
 #gcc -c pt2_decoder.c -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I ./include
 #gcc *.o -lbfd -lpthread  -o pt2_decoder
-gcc -fPIC -c parallel_excl_decoder.cpp -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I profiler/internal/include -I ./include
+g++ -shared -fPIC -c parallel_excl_decoder.cpp -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I profiler/internal/include -I ./include  -I/usr/include -I$JAVA_HOME/include -I$JAVA_HOME/include/linux
 
-gcc -fPIC -c parallel_decoder.cpp -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I ./include -I profiler/internal/include -I ./
+g++ -shared -fPIC -c parallel_decoder.cpp -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I ./include -I profiler/internal/include -I ./  -I/usr/include -I$JAVA_HOME/include -I$JAVA_HOME/include/linux
 gcc -fPIC -c c_wrapper.cpp -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I profiler/internal/include -I ./include -I ./
-g++ *.o -lbfd -lpthread -shared -fPIC -o cpplib_shared.so
+g++ *.o -lbfd -lm -lpthread -shared -fPIC -I/usr/include -I$JAVA_HOME/include -I$JAVA_HOME/include/linux -o cpplib_shared.so
 #gcc -fPIC -c c_wrapper.cpp -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I profiler/internal/include -I ./include -I ./
 #g++ *.o -lbfd -lpthread -o Main
 rm *.o
