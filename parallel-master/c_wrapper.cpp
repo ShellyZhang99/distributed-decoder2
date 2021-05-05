@@ -49,13 +49,13 @@ extern "C" int decode2(int i)
     int cpunum = i/8;
     int peventnum = i%8;
     Parallel_decoder *decoder = Parallel_decoder_ctor();
-    string a = "testFile/perf.data-aux-idx";
+    string a = "perf.data-aux-idx";
     char num = '0'+cpunum;
     a += num;
 
     a.append(".bin");
     char* str = (char*)a.data();
-    string a2 = "testFile/perf-attr-config";
+    string a2 = "perf-attr-config";
     char *str2 =  (char*)a2.data();
     Parallel_decoder_add_excl_decoder(decoder, str2, cpunum, str);
     Parallel_excl_decoder *para_decoder = Parallel_excl_decoder_get(decoder, peventnum);

@@ -108,15 +108,15 @@ using namespace std;
         if(!this->insn)
             return -1;
         ptdec = this->insn;
-        offset = 0ull;
-        sync = 0ull;
-        time = 0ull;
+        offset = 0;
+        sync = 0;
+        time = 0;
         const char *binary_name;
         for (;;) {
             struct pt_insn temp_insn;
 
             /* Initialize the IP - we use it for error reporting. */
-            temp_insn.ip = 0ull;
+            temp_insn.ip = 0;
 
             status = pt_insn_sync_forward(ptdec);
 
