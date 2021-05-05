@@ -190,7 +190,7 @@ using namespace std;
         int result = decode_insn();
        ofstream outfile;
                    string fileName = "outputFileTemp";
-                   outfile.open("outputFileTemp.txt");
+                   outfile.open("/home/bigdataflow/DistributedDecoder/Test0/outputFileTemp.txt");
                struct sourcefile *source = profiler->source_list;
                while(source){
                outfile<<"\n\n";
