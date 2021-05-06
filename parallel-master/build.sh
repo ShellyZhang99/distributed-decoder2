@@ -19,8 +19,10 @@ cd ..
 g++ -shared -fPIC -c parallel_excl_decoder.cpp -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I profiler/internal/include -I ./include  -I/usr/include -I$JAVA_HOME/include -I$JAVA_HOME/include/linux
 
 g++ -shared -fPIC -c parallel_decoder.cpp -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I ./include -I profiler/internal/include -I ./  -I/usr/include -I$JAVA_HOME/include -I$JAVA_HOME/include/linux
-gcc -fPIC -c c_wrapper.cpp -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I profiler/internal/include -I ./include -I ./
-g++ *.o -lbfd -lm -lpthread -shared -fPIC -I/usr/include -I$JAVA_HOME/include -I$JAVA_HOME/include/linux -o cpplib_shared.so
+#gcc -fPIC -c c_wrapper.cpp -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I profiler/internal/include -I ./include -I ./
+#g++ *.o -lbfd -lm -lpthread -shared -fPIC -I /usr/include -I /usr/lib/java/jdk1.8.0_281/include/ -I /usr/lib/java/jdk1.8.0_281/include/linux -o cpplib_shared.so
 #gcc -fPIC -c c_wrapper.cpp -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I profiler/internal/include -I ./include -I ./
 #g++ *.o -lbfd -lpthread -o Main
+gcc -fPIC -c org_example_SimpDecoder.cpp -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I profiler/internal/include -I ./include -I ./ -I /usr/lib/java/jdk1.8.0_281/include -I /usr/lib/java/jdk1.8.0_281/include/linux
+g++ *.o -shared -lbfd -lm -lpthread -shared -fPIC -Wl,-rpath /home/bigdataflow/DistributedDecoder/ -I /usr/include -I /usr/lib/java/jdk1.8.0_281/include -I /usr/lib/java/jdk1.8.0_281/include/linux -o libSimpDecoder.so
 rm *.o
