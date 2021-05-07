@@ -45,7 +45,7 @@ public:
 
     int decode_insn();
 
-    int decode();
+    int decode(int no);
 };
 
 #endif

@@ -185,13 +185,16 @@ using namespace std;
     }
 
 ///gaixie func
-    int Parallel_excl_decoder::decode()
+    int Parallel_excl_decoder::decode(int no)
     {
         int result = decode_insn();
        ofstream outfile;
-                   string fileName = "outputFileTemp";
-                   outfile.open("outputFileTemp.txt");
+                   string fileName = "/home/bigdataflow/DistributedDecoder/Test0/outputFileTemp";
+                   fileName +=to_string(no);
+                   fileName +=".txt";
+                   outfile.open(fileName);
                struct sourcefile *source = profiler->source_list;
+                outfile<<no<<endl;
                while(source){
                outfile<<"\n\n";
                outfile<<source->filename;
