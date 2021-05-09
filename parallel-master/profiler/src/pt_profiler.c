@@ -237,19 +237,19 @@ int pt_profiler_add(struct pt_profiler *profiler,
                     struct pt_excl_profiler *excl_profiler,
                     struct pt_insn *insn){
     if (!profiler || !excl_profiler || !insn){
-        fprintf(stderr, "profiler: internal error\n");
+        //fprintf(stderr, "profiler: internal error\n");
         return -1;
     }
     
     if (!insn->filename){
-        fprintf(stderr, "profiler: insn belongs to nowhere\n");
+        //fprintf(stderr, "profiler: insn belongs to nowhere\n");
         return -1;
     }
 
     struct binaryfile **binary = &excl_profiler->binary;
     if (!(*binary) || strcmp((*binary)->filename, insn->filename)){
         if (!find_binaryfile(profiler, insn->filename, binary)){
-            fprintf(stderr, "profiler: faile to find binaryfile\n");
+            //fprintf(stderr, "profiler: faile to find binaryfile\n");
             return -1;
         }
     }
@@ -263,7 +263,7 @@ int pt_profiler_add(struct pt_profiler *profiler,
     struct sourcefile **source = &excl_profiler->source;
     if (!(*source) || strcmp((*source)->filename, line.filename)){
         if (!find_sourcefile(profiler, line.filename, source)){
-            fprintf(stderr, "profiler: fail to find soucefile\n");
+            //fprintf(stderr, "profiler: fail to find soucefile\n");
         }
     }
 
@@ -276,11 +276,11 @@ int pt_profiler_add(struct pt_profiler *profiler,
     if (excl_profiler->call){
         excl_profiler->call = 0;
         for (int i = 0; i < call_stack; i++){
-            printf("\t");
+            //printf("\t");
         }
-        printf("%s\n", line.functionname);
+        //printf("%s\n", line.functionname);
         if (!find_function(*source, line.functionname, func)){
-            fprintf(stderr, "profiler: fail to find function\n");
+            //fprintf(stderr, "profiler: fail to find function\n");
             return -1;
         }
         cnt_function(*func);
@@ -300,14 +300,14 @@ int pt_profiler_add(struct pt_profiler *profiler,
 void pt_profiler_print(struct pt_profiler *profiler){
     struct sourcefile *source = profiler->source_list;
     while(source){
-        printf("%s\n", source->filename);
+        //printf("%s\n", source->filename);
         for (int i = 0; i < source->vol; i++){
-            if (source->cnt[i])
-                printf("\t\tline:%d\t\t%d\n",i, source->cnt[i]);
+            //if (source->cnt[i])
+                //printf("\t\tline:%d\t\t%d\n",i, source->cnt[i]);
         }
         struct function *func = source->func_list;
         while(func){
-            printf("\t\t\t%s:  %d\n", func->functionname, func->cnt);
+            //printf("\t\t\t%s:  %d\n", func->functionname, func->cnt);
             func = func->next;    
         }
         source = source->next;

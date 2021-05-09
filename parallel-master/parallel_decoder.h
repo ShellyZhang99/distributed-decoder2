@@ -65,8 +65,8 @@ public:
     	if (!errstr)
     		errstr = "<unknown error>";
 
-    	fprintf(stderr, "[%s:%016" PRIx64 " sideband %d %s: %s]\n", filename, offset,
-    	       id, severity, errstr);
+    	//fprintf(stderr, "[%s:%016" PRIx64 " sideband %d %s: %s]\n", filename, offset,
+    	      // id, severity, errstr);
 
     	return 0;
     }

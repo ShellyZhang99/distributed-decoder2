@@ -58,6 +58,7 @@ static inline int pt_fprint_version(FILE *file, struct pt_version version)
 				       version.major, version.minor,
 				       version.patch);
 	}
+
 }
 
 static inline int pt_print_version(struct pt_version version)
@@ -78,11 +79,11 @@ static inline void pt_print_tool_version(const char *name)
 	if (!name)
 		name = "<unknown>";
 
-	printf("%s-", name);
+	//printf("%s-", name);
 	pt_print_version(v);
-	printf(" / libipt-");
+	//printf(" / libipt-");
 	pt_print_version(pt_library_version());
-	printf("\n");
+	//printf("\n");
 }
 
 #endif /* PT_VERSION_H */

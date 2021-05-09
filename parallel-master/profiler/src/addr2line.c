@@ -110,16 +110,22 @@ get_file_size (const char * file_name)
     if (stat (file_name, &statbuf) < 0)
     {
         if (errno == ENOENT)
-	        fprintf (stderr, "BFD: '%s': No such file\n", file_name);
+	        {//fprintf (stderr, "BFD: '%s': No such file\n", file_name);
+	        }
         else
-	        fprintf (stderr, "BFD Warning: could not locate '%s'.  reason: %s\n",
-		        file_name, strerror (errno));
+	        {
+	        //fprintf (stderr, "BFD Warning: could not locate '%s'.  reason: %s\n",
+		      //  file_name, strerror (errno));
+		        }
     }  
     else if (! S_ISREG (statbuf.st_mode))
-        fprintf (stderr, "BFD Warning: '%s' is not an ordinary file\n", file_name);
+        {
+        //fprintf (stderr, "BFD Warning: '%s' is not an ordinary file\n", file_name);
+        }
     else if (statbuf.st_size < 0)
-        fprintf (stderr, "BFD Warning: '%s' has negative size, probably it is too large\n",
-               file_name);
+        {
+        //fprintf (stderr, "BFD Warning: '%s' has negative size, probably it is too large\n", file_name);
+               }
     else
         return statbuf.st_size;
 
@@ -151,10 +157,10 @@ process_file (const char *file_name, struct bfd_desc *desc)
     {
         if (bfd_get_error () == bfd_error_file_ambiguously_recognized)
         {
-            fprintf (stderr, "BFD format not surpported. Support: ");
+            //fprintf (stderr, "BFD format not surpported. Support: ");
             while(matching)
-                fprintf(stderr, "%s ", *matching++);
-            fprintf(stderr, "\n");
+                *matching++;
+            //fprintf(stderr, "\n");
             free (matching);
         }
         bfd_close(desc->abfd);

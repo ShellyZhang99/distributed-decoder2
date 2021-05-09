@@ -45,19 +45,19 @@ using namespace std;
     	uint64_t pos;
 
     	err = -pte_internal;
-    	pos = 0ull;
+    	pos = 0;
 
 
     	err = pt_insn_get_offset(insn, &pos);
 
     	if (err < 0) {
-    		fprintf(stderr, "%u could not determine offset: %s\n",
-    		       id, pt_errstr(pt_errcode(err)));
-    		fprintf(stderr, "%u [?, %" PRIx64 ": %s: %s]\n", id,
-                    ip, errtype, pt_errstr(pt_errcode(errcode)));
+    		//fprintf(stderr, "%u could not determine offset: %s\n",
+    		       //id, pt_errstr(pt_errcode(err)));
+    		//fprintf(stderr, "%u [?, %" PRIx64 ": %s: %s]\n", id,
+                    //ip, errtype, pt_errstr(pt_errcode(errcode)));
     	} else{
-    		fprintf(stderr, "%u [%" PRIx64 ", %" PRIx64 ": %s: %s]\n", id,
-                   pos, ip, errtype, pt_errstr(pt_errcode(errcode)));
+    		//fprintf(stderr, "%u [%" PRIx64 ", %" PRIx64 ": %s: %s]\n", id,
+                   //pos, ip, errtype, pt_errstr(pt_errcode(errcode)));
         }
     }
 
@@ -97,7 +97,7 @@ using namespace std;
         */
         struct pt_excl_profiler *excl_profiler = pt_excl_profiler_alloc();
         if (!excl_profiler){
-            fprintf(stderr, "failed alloc excl profiler\n");
+            //fprintf(stderr, "failed alloc excl profiler\n");
             return -pte_nomem;
         }
 
@@ -108,15 +108,15 @@ using namespace std;
         if(!this->insn)
             return -1;
         ptdec = this->insn;
-        offset = 0ull;
-        sync = 0ull;
-        time = 0ull;
+        offset = 0;
+        sync = 0;
+        time = 0;
         const char *binary_name;
         for (;;) {
             struct pt_insn temp_insn;
 
             /* Initialize the IP - we use it for error reporting. */
-            temp_insn.ip = 0ull;
+            temp_insn.ip = 0;
 
             status = pt_insn_sync_forward(ptdec);
 
@@ -200,16 +200,16 @@ using namespace std;
                outfile<<source->filename;
                outfile<<"\n";
                    //dest = dest+ "\n\n"+source->filename + "\n";
-                   printf("%s\n", source->filename);
+                   //printf("%s\n", source->filename);
                    for (int i = 0; i < source->vol; i++){
                        if (source->cnt[i])
                           outfile<<"\t\tline:"<<i<<"\t\t"<<source->cnt[i]<<"\n";
-                           printf("\t\tline:%d\t\t%d\n",i, source->cnt[i]);
+                           //printf("\t\tline:%d\t\t%d\n",i, source->cnt[i]);
                    }
                    struct function *func = source->func_list;
                    while(func){
                        outfile<< "\t\t\t"<<func->functionname<<"   "<<to_string(func->cnt)<<"\n";
-                       printf("\t\t\t%s:  %d\n", func->functionname, func->cnt);
+                       //printf("\t\t\t%s:  %d\n", func->functionname, func->cnt);
                        func = func->next;
                    }
                    source = source->next;

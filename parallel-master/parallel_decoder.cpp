@@ -35,13 +35,13 @@ Parallel_decoder::Parallel_decoder()
         excl_decoder2->iscache = pt_iscache_alloc(NULL);
         if (!excl_decoder2->iscache)
         {
-            printf("error1\n");
+            //printf("error1\n");
                     return ;
         }
                 excl_decoder2->session = pt_sb_alloc(excl_decoder2->iscache);
                 if (!excl_decoder2->session) {
                     pt_iscache_free(excl_decoder->iscache);
-                    printf("error2\n");
+                    //printf("error2\n");
                     return ;
                 }
                          excl_decoder2->profiler = pt_profiler_alloc();
@@ -178,37 +178,37 @@ int Parallel_decoder::load_file(uint8_t **buffer, size_t *psize, const char *fil
     int errcode;
 
     if (!buffer || !psize || !filename || !prog) {
-        fprintf(stderr, "%s: internal error.\n", prog ? prog : "");
+        //fprintf(stderr, "%s: internal error.\n", prog ? prog : "");
         return -1;
     }
 
     errno = 0;
     file = fopen(filename, "rb");
     if (!file) {
-        fprintf(stderr, "%s: failed to open %s: %d.\n",
-            prog, filename, errno);
+        //fprintf(stderr, "%s: failed to open %s: %d.\n",
+            //prog, filename, errno);
         return -1;
     }
 
     errcode = fseek(file, 0, SEEK_END);
     if (errcode) {
-        fprintf(stderr, "%s: failed to determine size of %s: %d.\n",
-            prog, filename, errno);
+        //fprintf(stderr, "%s: failed to determine size of %s: %d.\n",
+            //prog, filename, errno);
         goto err_file;
     }
 
     fsize = ftell(file);
     if (fsize < 0) {
-        fprintf(stderr, "%s: failed to determine size of %s: %d.\n",
-            prog, filename, errno);
+        //fprintf(stderr, "%s: failed to determine size of %s: %d.\n",
+           // prog, filename, errno);
         goto err_file;
     }
 
     begin = (long) offset;
     if (((uint64_t) begin != offset) || (fsize <= begin)) {
-        fprintf(stderr,
-            "%s: bad offset 0x%" PRIx64 " into %s.\n",
-            prog, offset, filename);
+        //fprintf(stderr,
+            //"%s: bad offset 0x%" PRIx64 " into %s.\n",
+            //prog, offset, filename);
         goto err_file;
     }
 
@@ -218,9 +218,9 @@ int Parallel_decoder::load_file(uint8_t **buffer, size_t *psize, const char *fil
 
         range_end = offset + size;
         if ((uint64_t) end < range_end) {
-            fprintf(stderr,
-                "%s: bad range 0x%" PRIx64 " in %s.\n",
-            prog, range_end, filename);
+            //fprintf(stderr,
+                //"%s: bad range 0x%" PRIx64 " in %s.\n",
+            //prog, range_end, filename);
             goto err_file;
         }
 
@@ -231,22 +231,22 @@ int Parallel_decoder::load_file(uint8_t **buffer, size_t *psize, const char *fil
 
     content = (uint8_t*) malloc((size_t) fsize);
     if (!content) {
-        fprintf(stderr, "%s: failed to allocated memory %s.\n",
-            prog, filename);
+        //fprintf(stderr, "%s: failed to allocated memory %s.\n",
+            //prog, filename);
         goto err_file;
     }
 
     errcode = fseek(file, begin, SEEK_SET);
     if (errcode) {
-        fprintf(stderr, "%s: failed to load %s: %d.\n",
-            prog, filename, errno);
+        //fprintf(stderr, "%s: failed to load %s: %d.\n",
+            //prog, filename, errno);
         goto err_content;
     }
 
     read = fread(content, (size_t) fsize, 1u, file);
     if (read != 1) {
-        fprintf(stderr, "%s: failed to load %s: %d.\n",
-            prog, filename, errno);
+        //fprintf(stderr, "%s: failed to load %s: %d.\n",
+            //prog, filename, errno);
         goto err_content;
     }
 
@@ -274,8 +274,8 @@ int Parallel_decoder::load_pt(char *arg, const char *prog)
 
     errcode = preprocess_filename(arg, &foffset, &fsize);
     if (errcode < 0) {
-        fprintf(stderr, "%s: bad file %s: %s.\n", prog, arg,
-            pt_errstr(pt_errcode(errcode)));
+        //fprintf(stderr, "%s: bad file %s: %s.\n", prog, arg,
+            //pt_errstr(pt_errcode(errcode)));
         return -1;
     }
 
@@ -345,8 +345,8 @@ int Parallel_decoder::split_trace(struct pt_config *config){
 
     pktdec = pt_pkt_alloc_decoder(config);
     if (!pktdec){
-        fprintf(stderr,
-                "failed to create pkt decoder.\n");
+        //fprintf(stderr,
+                //"failed to create pkt decoder.\n");
         return -pte_nomem;
     }
 
@@ -357,7 +357,7 @@ int Parallel_decoder::split_trace(struct pt_config *config){
     /* memorize synchronizing point offsets */
     uint64_t *offset_buf = (uint64_t*)malloc( 8 * size );
     if (!offset_buf){
-        fprintf(stderr, "failed to create offset buffer\n");
+        //fprintf(stderr, "failed to create offset buffer\n");
         return -pte_nomem;
     }
     memset(offset_buf, 0, 8*size);
@@ -368,15 +368,15 @@ int Parallel_decoder::split_trace(struct pt_config *config){
         status = pt_pkt_sync_forward(pktdec);
         if (status < 0){
             if (status != -pte_eos)
-                fprintf(stderr, "pkt sync error: %s\n",
-                    pt_errstr(pt_errcode(status)));
+                //fprintf(stderr, "pkt sync error: %s\n",
+                    //pt_errstr(pt_errcode(status)));
             break;
         }
 
         errcode = pt_pkt_get_sync_offset(pktdec, &offset);
         if (errcode < 0){
-            fprintf(stderr, "pkt get sync error %s\n",
-                    pt_errstr(pt_errcode(errcode)));
+            //fprintf(stderr, "pkt get sync error %s\n",
+                   // pt_errstr(pt_errcode(errcode)));
             break;
         }
 
@@ -385,7 +385,7 @@ int Parallel_decoder::split_trace(struct pt_config *config){
             uint64_t *new_buf = (uint64_t*)malloc(8*new_size);
             if (!new_buf){
                 free(offset_buf);
-                fprintf(stderr, "failed to create offset buffer\n");
+                //fprintf(stderr, "failed to create offset buffer\n");
                 return -pte_nomem;
             }
             memset(new_buf, 0, new_size * 8);
@@ -462,20 +462,20 @@ int Parallel_decoder::pt2_sb_pevent(char *filename, const char *prog)
     int errcode;
 
     if (!this || !prog) {
-        fprintf(stderr, "%s: internal error.\n", prog ? prog : "?");
+        //fprintf(stderr, "%s: internal error.\n", prog ? prog : "?");
         return -1;
     }
 
     errcode = preprocess_filename(filename, &foffset, &fsize);
     if (errcode < 0) {
-        fprintf(stderr, "%s: bad file %s: %s.\n", prog, filename,
-            pt_errstr(pt_errcode(errcode)));
+        //fprintf(stderr, "%s: bad file %s: %s.\n", prog, filename,
+            //pt_errstr(pt_errcode(errcode)));
         return -1;
     }
 
     if (SIZE_MAX < foffset) {
-        fprintf(stderr,
-            "%s: bad offset: 0x%" PRIx64 ".\n", prog, foffset);
+        //fprintf(stderr,
+            //"%s: bad offset: 0x%" PRIx64 ".\n", prog, foffset);
         return -1;
     }
 
@@ -487,9 +487,9 @@ int Parallel_decoder::pt2_sb_pevent(char *filename, const char *prog)
     if (fsize) {
         fend = foffset + fsize;
         if ((fend <= foffset) || (SIZE_MAX < fend)) {
-            fprintf(stderr,
-                "%s: bad range: 0x%" PRIx64 "-0x%" PRIx64 ".\n",
-                prog, foffset, fend);
+            //fprintf(stderr,
+                //"%s: bad range: 0x%" PRIx64 "-0x%" PRIx64 ".\n",
+               // prog, foffset, fend);
             return -1;
         }
 
@@ -502,8 +502,8 @@ int Parallel_decoder::pt2_sb_pevent(char *filename, const char *prog)
         errcode = pt_sb_alloc_pevent_decoder(
                             excl_decoder->session, &sb_config);
         if (errcode < 0) {
-            fprintf(stderr, "%s: error loading %s: %s.\n", prog,
-                    filename, pt_errstr(pt_errcode(errcode)));
+            //fprintf(stderr, "%s: error loading %s: %s.\n", prog,
+                    //filename, pt_errstr(pt_errcode(errcode)));
             return -1;
         }
     }
@@ -517,20 +517,20 @@ int Parallel_decoder::get_arg_uint64(uint64_t *value, const char *option, const 
     char *rest;
 
     if (!value || !option || !prog) {
-        fprintf(stderr, "%s: internal error.\n", prog ? prog : "?");
+        //fprintf(stderr, "%s: internal error.\n", prog ? prog : "?");
         return 0;
     }
 
     if (!arg || arg[0] == 0 || (arg[0] == '-' && arg[1] == '-')) {
-        fprintf(stderr, "%s: %s: missing argument.\n", prog, option);
+        //fprintf(stderr, "%s: %s: missing argument.\n", prog, option);
         return 0;
     }
 
     errno = 0;
     *value = strtoull(arg, &rest, 0);
     if (errno || *rest) {
-        fprintf(stderr, "%s: %s: bad argument: %s.\n", prog, option,
-            arg);
+        //fprintf(stderr, "%s: %s: bad argument: %s.\n", prog, option,
+            //arg);
         return 0;
     }
 
@@ -546,8 +546,8 @@ int Parallel_decoder::get_arg_uint32(uint32_t *value, const char *option, const 
         return 0;
 
     if (val > UINT32_MAX) {
-        fprintf(stderr, "%s: %s: value too big: %s.\n", prog, option,
-            arg);
+        //fprintf(stderr, "%s: %s: value too big: %s.\n", prog, option,
+            //arg);
         return 0;
     }
 
@@ -566,8 +566,8 @@ int Parallel_decoder::get_arg_uint16(uint16_t *value, const char *option, const 
         return 0;
 
     if (val > UINT16_MAX) {
-        fprintf(stderr, "%s: %s: value too big: %s.\n", prog, option,
-            arg);
+        //fprintf(stderr, "%s: %s: value too big: %s.\n", prog, option,
+            //arg);
         return 0;
     }
 
@@ -586,8 +586,8 @@ int Parallel_decoder::get_arg_uint8(uint8_t *value, const char *option, const ch
         return 0;
 
     if (val > UINT8_MAX) {
-        fprintf(stderr, "%s: %s: value too big: %s.\n", prog, option,
-            arg);
+        //fprintf(stderr, "%s: %s: value too big: %s.\n", prog, option,
+            //arg);
         return 0;
     }
 
@@ -602,8 +602,8 @@ int Parallel_decoder::parallel_decode(char *config_filename, int primary, char* 
     int errcode, i;
 
     if (!config_filename){
-        fprintf(stderr, "%s: error config file %s not set\n",
-                prog, config_filename);
+        //fprintf(stderr, "%s: error config file %s not set\n",
+                //prog, config_filename);
         return -1;
     }
 
@@ -611,8 +611,8 @@ int Parallel_decoder::parallel_decode(char *config_filename, int primary, char* 
     FILE *config_file = fopen(config_filename, "r");
 
     if (!config_file){
-        fprintf(stderr, "%s: error config file : %s\n",
-                prog, config_filename);
+        //fprintf(stderr, "%s: error config file : %s\n",
+               // prog, config_filename);
         goto err;
     }
 
@@ -627,8 +627,8 @@ int Parallel_decoder::parallel_decode(char *config_filename, int primary, char* 
             int cpu_num;
             argc = fscanf(config_file, "%d%s", &cpu_num, arg);
             if (argc != 2) {
-                fprintf(stderr, "%s: sideband: "
-                    "missing argument.\n", prog);
+                //fprintf(stderr, "%s: sideband: "
+                    //"missing argument.\n", prog);
                 goto err;
             }
             this->pevent.primary = (cpu_num == primary)? 1 : 0;
@@ -690,24 +690,24 @@ int Parallel_decoder::parallel_decode(char *config_filename, int primary, char* 
              */
 
             if (pt2_have_decoder()) {
-                fprintf(stderr,
-                    "%s: please specify cpu before the pt source file.\n",
-                    prog);
+                //fprintf(stderr,
+                    //"%s: please specify cpu before the pt source file.\n",
+                    //prog);
                 goto err;
             }
 
             argc = fscanf(config_file, "%s", arg);
             if (argc != 1) {
-                fprintf(stderr,
-                    "%s: --cpu: missing argument.\n", prog);
+                //fprintf(stderr,
+                    //"%s: --cpu: missing argument.\n", prog);
                 goto out;
             }
             const char *tmp = arg;
             errcode = pt_cpu_parse(&this->config.cpu, tmp);
             if (errcode < 0) {
-                fprintf(stderr,
-                    "%s: cpu must be specified as f/m[/s]\n",
-                    prog);
+                //fprintf(stderr,
+                    //"%s: cpu must be specified as f/m[/s]\n",
+                    //prog);
                 goto err;
             }
             continue;
@@ -773,9 +773,9 @@ int Parallel_decoder::parallel_decode(char *config_filename, int primary, char* 
                            (void *)&excl_decoder->id);
         errcode = pt_sb_init_decoders(excl_decoder->session);
         if (errcode < 0) {
-            fprintf(stderr,
-                "%s: error initializing sideband decoders: %s.\n",
-                prog, pt_errstr(pt_errcode(errcode)));
+            //fprintf(stderr,
+               // "%s: error initializing sideband decoders: %s.\n",
+                //prog, pt_errstr(pt_errcode(errcode)));
             goto err;
         }
     }
@@ -784,9 +784,9 @@ int Parallel_decoder::parallel_decode(char *config_filename, int primary, char* 
     if (this->config.cpu.vendor) {
         errcode = pt_cpu_errata(&this->config.errata,
                         &this->config.cpu);
-        if (errcode < 0)
-            fprintf(stderr, "[0, 0: config error: %s]\n",
-                pt_errstr(pt_errcode(errcode)));
+        //if (errcode < 0)
+            //fprintf(stderr, "[0, 0: config error: %s]\n",
+                //pt_errstr(pt_errcode(errcode)));
     }
 
     errcode = load_pt(pt_filename, prog);
@@ -798,7 +798,7 @@ int Parallel_decoder::parallel_decode(char *config_filename, int primary, char* 
         goto err;
 
     if (!pt2_have_decoder()) {
-        fprintf(stderr, "%s: no pt file.\n", prog);
+        //fprintf(stderr, "%s: no pt file.\n", prog);
         goto err;
     }
 out:

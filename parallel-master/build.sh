@@ -24,5 +24,5 @@ g++ -shared -fPIC -c parallel_decoder.cpp -I libipt/internal/include/ -I libipt/
 #gcc -fPIC -c c_wrapper.cpp -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I profiler/internal/include -I ./include -I ./
 #g++ *.o -lbfd -lpthread -o Main
 gcc -fPIC -c org_example_SimpDecoder.cpp -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I profiler/internal/include -I ./include -I ./ -I /usr/lib/java/jdk1.8.0_281/include -I /usr/lib/java/jdk1.8.0_281/include/linux
-g++ *.o -shared -lbfd -lm -lpthread -shared -fPIC -Wl,-rpath /home/bigdataflow/DistributedDecoder/ -I /usr/include -I /usr/lib/java/jdk1.8.0_281/include -I /usr/lib/java/jdk1.8.0_281/include/linux -o libSimpDecoder.so
+g++ *.o -lbfd -lpthread -shared -fPIC  -lm -Wl,-rpath /home/bigdataflow/DistributedDecoder/ -I /usr/include -I /usr/lib/java/jdk1.8.0_281/include -I /usr/lib/java/jdk1.8.0_281/include/linux -o libSimpDecoder.so
 rm *.o

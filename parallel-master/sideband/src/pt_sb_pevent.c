@@ -401,7 +401,7 @@ static int pt_sb_pevent_print_event(const struct pev_event *event,
 
 	switch (event->type) {
 	default:
-		if (flags & ptsbp_compact)
+		/*if (flags & ptsbp_compact)
 			fprintf(stream, "UNKNOWN (%x, %x)", event->type,
 				event->misc);
 
@@ -409,7 +409,7 @@ static int pt_sb_pevent_print_event(const struct pev_event *event,
 			fprintf(stream, "UNKNOWN");
 			fprintf(stream, "\n  type: %x", event->type);
 			fprintf(stream, "\n  misc: %x", event->misc);
-		}
+		}*/
 
 		break;
 
@@ -420,7 +420,7 @@ static int pt_sb_pevent_print_event(const struct pev_event *event,
 		if (!mmap)
 			return -pte_bad_packet;
 
-		if (flags & ptsbp_compact)
+		/*if (flags & ptsbp_compact)
 			fprintf(stream, "PERF_RECORD_MMAP  %x/%x, %" PRIx64
 				", %" PRIx64 ", %" PRIx64 ", %s",
 				mmap->pid, mmap->tid, mmap->addr, mmap->len,
@@ -434,7 +434,7 @@ static int pt_sb_pevent_print_event(const struct pev_event *event,
 			fprintf(stream, "\n  len: %" PRIx64, mmap->len);
 			fprintf(stream, "\n  pgoff: %" PRIx64, mmap->pgoff);
 			fprintf(stream, "\n  filename: %s", mmap->filename);
-		}
+		}*/
 	}
 		break;
 
@@ -445,7 +445,7 @@ static int pt_sb_pevent_print_event(const struct pev_event *event,
 		if (!lost)
 			return -pte_bad_packet;
 
-		if (flags & ptsbp_compact)
+		/*if (flags & ptsbp_compact)
 			fprintf(stream, "PERF_RECORD_LOST  %" PRIx64 ", %"
 				PRIx64, lost->id, lost->lost);
 
@@ -453,7 +453,7 @@ static int pt_sb_pevent_print_event(const struct pev_event *event,
 			fprintf(stream, "PERF_RECORD_LOST");
 			fprintf(stream, "\n  id: %" PRIx64, lost->id);
 			fprintf(stream, "\n  lost: %" PRIx64, lost->lost);
-		}
+		}*/
 	}
 		break;
 
@@ -467,7 +467,7 @@ static int pt_sb_pevent_print_event(const struct pev_event *event,
 
 		sfx = event->misc & PERF_RECORD_MISC_COMM_EXEC ? ".EXEC" : "";
 
-		if (flags & ptsbp_compact)
+		/*if (flags & ptsbp_compact)
 			fprintf(stream, "PERF_RECORD_COMM%s  %x/%x, %s", sfx,
 				comm->pid, comm->tid, comm->comm);
 
@@ -476,7 +476,7 @@ static int pt_sb_pevent_print_event(const struct pev_event *event,
 			fprintf(stream, "\n  pid: %x", comm->pid);
 			fprintf(stream, "\n  tid: %x", comm->tid);
 			fprintf(stream, "\n  comm: %s", comm->comm);
-		}
+		}*/
 	}
 		break;
 
@@ -487,7 +487,7 @@ static int pt_sb_pevent_print_event(const struct pev_event *event,
 		if (!exit)
 			return -pte_bad_packet;
 
-		if (flags & ptsbp_compact)
+		/*if (flags & ptsbp_compact)
 			fprintf(stream, "PERF_RECORD_EXIT  %x/%x, %x/%x, %"
 				PRIx64, exit->pid, exit->tid, exit->ppid,
 				exit->ptid, exit->time);
@@ -499,7 +499,7 @@ static int pt_sb_pevent_print_event(const struct pev_event *event,
 			fprintf(stream, "\n  tid: %x", exit->tid);
 			fprintf(stream, "\n  ptid: %x", exit->ptid);
 			fprintf(stream, "\n  time: %" PRIx64, exit->time);
-		}
+		}*/
 	}
 		break;
 
@@ -510,7 +510,7 @@ static int pt_sb_pevent_print_event(const struct pev_event *event,
 		if (!throttle)
 			return -pte_bad_packet;
 
-		if (flags & ptsbp_compact)
+		/*if (flags & ptsbp_compact)
 			fprintf(stream, "PERF_RECORD_THROTTLE  %" PRIx64 ", %"
 				PRIx64 ", %" PRIx64, throttle->time,
 				throttle->id, throttle->stream_id);
@@ -521,7 +521,7 @@ static int pt_sb_pevent_print_event(const struct pev_event *event,
 			fprintf(stream, "\n  id: %" PRIx64, throttle->id);
 			fprintf(stream, "\n  stream_id: %" PRIx64,
 				throttle->stream_id);
-		}
+		}*/
 	}
 		break;
 
@@ -532,7 +532,7 @@ static int pt_sb_pevent_print_event(const struct pev_event *event,
 		if (!throttle)
 			return -pte_bad_packet;
 
-		if (flags & ptsbp_compact)
+		/*if (flags & ptsbp_compact)
 			fprintf(stream, "PERF_RECORD_UNTHROTTLE  %" PRIx64
 				", %" PRIx64 ", %" PRIx64, throttle->time,
 				throttle->id, throttle->stream_id);
@@ -543,7 +543,7 @@ static int pt_sb_pevent_print_event(const struct pev_event *event,
 			fprintf(stream, "\n  id: %" PRIx64, throttle->id);
 			fprintf(stream, "\n  stream_id: %" PRIx64,
 				throttle->stream_id);
-		}
+		}*/
 	}
 		break;
 
@@ -554,7 +554,7 @@ static int pt_sb_pevent_print_event(const struct pev_event *event,
 		if (!fork)
 			return -pte_bad_packet;
 
-		if (flags & ptsbp_compact)
+		/*if (flags & ptsbp_compact)
 			fprintf(stream, "PERF_RECORD_FORK  %x/%x, %x/%x, %"
 				PRIx64, fork->pid, fork->tid, fork->ppid,
 				fork->ptid, fork->time);
@@ -566,7 +566,7 @@ static int pt_sb_pevent_print_event(const struct pev_event *event,
 			fprintf(stream, "\n  tid: %x", fork->tid);
 			fprintf(stream, "\n  ptid: %x", fork->ptid);
 			fprintf(stream, "\n  time: %" PRIx64, fork->time);
-		}
+		}*/
 	}
 		break;
 
@@ -577,7 +577,7 @@ static int pt_sb_pevent_print_event(const struct pev_event *event,
 		if (!mmap2)
 			return -pte_bad_packet;
 
-		if (flags & ptsbp_compact)
+		/*if (flags & ptsbp_compact)
 			fprintf(stream, "PERF_RECORD_MMAP2  %x/%x, %" PRIx64
 				", %" PRIx64 ", %" PRIx64 ", %x, %x, %" PRIx64
 				", %" PRIx64 ", %x, %x, %s", mmap2->pid,
@@ -601,7 +601,7 @@ static int pt_sb_pevent_print_event(const struct pev_event *event,
 			fprintf(stream, "\n  prot: %x", mmap2->prot);
 			fprintf(stream, "\n  flags: %x", mmap2->flags);
 			fprintf(stream, "\n  filename: %s", mmap2->filename);
-		}
+		}*/
 	}
 		break;
 
@@ -615,7 +615,7 @@ static int pt_sb_pevent_print_event(const struct pev_event *event,
 
 		sfx = aux->flags & PERF_AUX_FLAG_TRUNCATED ? ".TRUNCATED" : "";
 
-		if (flags & ptsbp_compact)
+		/*if (flags & ptsbp_compact)
 			fprintf(stream, "PERF_RECORD_AUX%s  %" PRIx64 ", %"
 				PRIx64 ", %" PRIx64, sfx, aux->aux_offset,
 				aux->aux_size, aux->flags);
@@ -627,7 +627,7 @@ static int pt_sb_pevent_print_event(const struct pev_event *event,
 			fprintf(stream, "\n  aux size: %" PRIx64,
 				aux->aux_size);
 			fprintf(stream, "\n  flags: %" PRIx64, aux->flags);
-		}
+		}*/
 	}
 		break;
 
@@ -638,7 +638,7 @@ static int pt_sb_pevent_print_event(const struct pev_event *event,
 		if (!itrace_start)
 			return -pte_bad_packet;
 
-		if (flags & ptsbp_compact)
+		/*if (flags & ptsbp_compact)
 			fprintf(stream, "PERF_RECORD_ITRACE_START  %x/%x",
 				itrace_start->pid, itrace_start->tid);
 
@@ -646,7 +646,7 @@ static int pt_sb_pevent_print_event(const struct pev_event *event,
 			fprintf(stream, "PERF_RECORD_ITRACE_START");
 			fprintf(stream, "\n  pid: %x", itrace_start->pid);
 			fprintf(stream, "\n  tid: %x", itrace_start->tid);
-		}
+		}*/
 	}
 		break;
 
@@ -657,7 +657,7 @@ static int pt_sb_pevent_print_event(const struct pev_event *event,
 		if (!lost_samples)
 			return -pte_bad_packet;
 
-		if (flags & ptsbp_compact)
+		/*if (flags & ptsbp_compact)
 			fprintf(stream, "PERF_RECORD_LOST_SAMPLES  %" PRIx64,
 				lost_samples->lost);
 
@@ -665,7 +665,7 @@ static int pt_sb_pevent_print_event(const struct pev_event *event,
 			fprintf(stream, "PERF_RECORD_LOST_SAMPLES");
 			fprintf(stream, "\n  lost: %" PRIx64,
 				lost_samples->lost);
-		}
+		}*/
 
 	}
 		break;
@@ -675,8 +675,8 @@ static int pt_sb_pevent_print_event(const struct pev_event *event,
 
 		sfx = event->misc & PERF_RECORD_MISC_SWITCH_OUT ? "OUT" : "IN";
 
-		if (flags & (ptsbp_compact | ptsbp_verbose))
-			fprintf(stream, "PERF_RECORD_SWITCH.%s", sfx);
+		/*if (flags & (ptsbp_compact | ptsbp_verbose))
+			fprintf(stream, "PERF_RECORD_SWITCH.%s", sfx);*/
 	}
 		break;
 
@@ -696,7 +696,7 @@ static int pt_sb_pevent_print_event(const struct pev_event *event,
 		if (!switch_cpu_wide)
 			return -pte_bad_packet;
 
-		if (flags & ptsbp_compact)
+		/*if (flags & ptsbp_compact)
 			fprintf(stream, "PERF_RECORD_SWITCH_CPU_WIDE.%s  %x/%x",
 				sfx, switch_cpu_wide->next_prev_pid,
 				switch_cpu_wide->next_prev_tid);
@@ -707,7 +707,7 @@ static int pt_sb_pevent_print_event(const struct pev_event *event,
 				switch_cpu_wide->next_prev_pid);
 			fprintf(stream, "\n  %s tid: %x", pfx,
 				switch_cpu_wide->next_prev_tid);
-		}
+		}*/
 	}
 		break;
 	}
@@ -721,7 +721,7 @@ static int pt_sb_pevent_print_samples_compact(const struct pev_event *event,
 	if (!event)
 		return -pte_internal;
 
-	fprintf(stream, "  {");
+	/*fprintf(stream, "  {");
 
 	if (event->sample.pid && event->sample.tid)
 		fprintf(stream, " %x/%x", *event->sample.pid,
@@ -742,7 +742,7 @@ static int pt_sb_pevent_print_samples_compact(const struct pev_event *event,
 	if (event->sample.identifier)
 		fprintf(stream, " %" PRIx64, *event->sample.identifier);
 
-	fprintf(stream, " }");
+	fprintf(stream, " }");*/
 
 	return 0;
 }
@@ -753,7 +753,7 @@ static int pt_sb_pevent_print_samples_verbose(const struct pev_event *event,
 	if (!event)
 		return -pte_internal;
 
-	if (event->sample.pid && event->sample.tid) {
+	/*if (event->sample.pid && event->sample.tid) {
 		fprintf(stream, "\n  pid: %x", *event->sample.pid);
 		fprintf(stream, "\n  tid: %x", *event->sample.tid);
 	}
@@ -773,7 +773,7 @@ static int pt_sb_pevent_print_samples_verbose(const struct pev_event *event,
 
 	if (event->sample.identifier)
 		fprintf(stream, "\n  identifier: %" PRIx64,
-			*event->sample.identifier);
+			*event->sample.identifier);*/
 
 	return 0;
 }
@@ -827,23 +827,23 @@ static int pt_sb_pevent_print(struct pt_sb_pevent_priv *priv, FILE *stream,
 	/* Print filename and/or file offset before the actual record. */
 	switch (flags & (ptsbp_filename | ptsbp_file_offset)) {
 	case ptsbp_filename | ptsbp_file_offset:
-		fprintf(stream, "%s:%016" PRIx64 "  ", filename,
-			(uint64_t) (int64_t) (pos - begin));
+		//fprintf(stream, "%s:%016" PRIx64 "  ", filename,
+			//(uint64_t) (int64_t) (pos - begin));
 		break;
 
 	case ptsbp_filename:
-		fprintf(stream, "%s  ", filename);
+		//fprintf(stream, "%s  ", filename);
 		break;
 
 	case ptsbp_file_offset:
-		fprintf(stream, "%016" PRIx64 "  ",
-			(uint64_t) (int64_t) (pos - begin));
+		//fprintf(stream, "%016" PRIx64 "  ",
+			//(uint64_t) (int64_t) (pos - begin));
 		break;
 	}
 
 	/* Print the timestamp if requested and available. */
 	if ((flags & ptsbp_tsc) && event->sample.time)
-		fprintf(stream, "%016" PRIx64 "  ", event->sample.tsc);
+		//fprintf(stream, "%016" PRIx64 "  ", event->sample.tsc);
 
 	/* Print the actual sideband record. */
 	errcode = pt_sb_pevent_print_event(event, stream, flags);
@@ -857,8 +857,8 @@ static int pt_sb_pevent_print(struct pt_sb_pevent_priv *priv, FILE *stream,
 			return errcode;
 	}
 
-	if (flags)
-		fprintf(stream, "\n");
+	/*if (flags)
+		fprintf(stream, "\n");*/
 
 	return 0;
 }

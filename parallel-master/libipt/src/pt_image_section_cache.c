@@ -931,7 +931,7 @@ int pt_iscache_add_file(struct pt_image_section_cache *iscache,
 	if (!iscache || !filename)
 	{
 
-		printf("\nyou got it\n");
+		//printf("\nyou got it\n");
 		return -pte_invalid;
 }
 	errcode = pt_iscache_lock(iscache);

@@ -49,13 +49,9 @@ JNIEXPORT jint JNICALL Java_org_example_SimpDecoder_decode
       char* str = (char*)a.data();
       string a2 = "/home/bigdataflow/DistributedDecoder/Test0/perf-attr-config";
       char *str2 =  (char*)a2.data();
-      FILE* fp;
-              fp = fopen(str,"r");
-            if (fp != NULL){
+
       Parallel_decoder_add_excl_decoder(decoder, str2, cpunum, str);
       Parallel_excl_decoder *para_decoder = Parallel_excl_decoder_get(decoder, peventnum);
       return  Parallel_excl_decoder_decodePara(para_decoder, i);
-      }
-      else
-      return 0;
+      
   }
