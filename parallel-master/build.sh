@@ -22,5 +22,6 @@ g++ -shared -fPIC -c parallel_decoder.cpp -I libipt/internal/include/ -I libipt/
 gcc -fPIC -c c_wrapper.cpp -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I profiler/internal/include -I ./include -I ./
 g++ *.o -lbfd -lm -lpthread -shared -fPIC -I/usr/include -I$JAVA_HOME/include -I$JAVA_HOME/include/linux -o cpplib_shared.so
 #gcc -fPIC -c c_wrapper.cpp -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I profiler/internal/include -I ./include -I ./
-#g++ *.o -lbfd -lpthread -o Main
+#gcc -fPIC -c main.cpp -I libipt/internal/include/ -I libipt/include/ -I sideband/include/ -I profiler/include/ -I profiler/internal/include -I ./include -I ./
+#g++ *.o -lbfd -lpthread -Wl,-rpath /home/bigdataflow/DistributedDecoder/ -o Main
 rm *.o

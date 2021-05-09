@@ -30,6 +30,11 @@ Parallel_excl_decoder *Parallel_excl_decoder_get(Parallel_decoder *decoder, int 
 
 extern "C" DLL_EXPORT  int Parallel_decoder_add_excl_decoder(Parallel_decoder *decoder, char *config_filename, int primary, char* pt_filename)
 {
+    return 1;
+}
+
+extern "C" DLL_EXPORT  int Parallel_decoder_add_excl_decoder2(Parallel_decoder *decoder, char *config_filename, int primary, char* pt_filename)
+{
     return decoder->add_excl_decoder(config_filename, primary, pt_filename);
 }
 
@@ -47,6 +52,8 @@ extern "C" DLL_EXPORT  int Parallel_excl_decoder_decodePara(Parallel_excl_decode
 extern "C" int decode2(int i)
 {
     int cpunum = i/8;
+    if(cpunum != 4)
+        return 0;
     int peventnum = i%8;
     Parallel_decoder *decoder = Parallel_decoder_ctor();
     string a = "perf.data-aux-idx";
@@ -57,7 +64,7 @@ extern "C" int decode2(int i)
     char* str = (char*)a.data();
     string a2 = "perf-attr-config";
     char *str2 =  (char*)a2.data();
-    Parallel_decoder_add_excl_decoder(decoder, str2, cpunum, str);
+    Parallel_decoder_add_excl_decoder2(decoder, str2, cpunum, str);
     Parallel_excl_decoder *para_decoder = Parallel_excl_decoder_get(decoder, peventnum);
     return  Parallel_excl_decoder_decodePara(para_decoder);
 }

@@ -206,9 +206,9 @@ int Parallel_decoder::load_file(uint8_t **buffer, size_t *psize, const char *fil
 
     begin = (long) offset;
     if (((uint64_t) begin != offset) || (fsize <= begin)) {
-        fprintf(stderr,
+       /* fprintf(stderr,
             "%s: bad offset 0x%" PRIx64 " into %s.\n",
-            prog, offset, filename);
+            prog, offset, filename);*/
         goto err_file;
     }
 
@@ -474,8 +474,8 @@ int Parallel_decoder::pt2_sb_pevent(char *filename, const char *prog)
     }
 
     if (SIZE_MAX < foffset) {
-        fprintf(stderr,
-            "%s: bad offset: 0x%" PRIx64 ".\n", prog, foffset);
+        /*fprintf(stderr,
+            "%s: bad offset: 0x%" PRIx64 ".\n", prog, foffset);*/
         return -1;
     }
 
@@ -487,9 +487,9 @@ int Parallel_decoder::pt2_sb_pevent(char *filename, const char *prog)
     if (fsize) {
         fend = foffset + fsize;
         if ((fend <= foffset) || (SIZE_MAX < fend)) {
-            fprintf(stderr,
+            /*fprintf(stderr,
                 "%s: bad range: 0x%" PRIx64 "-0x%" PRIx64 ".\n",
-                prog, foffset, fend);
+                prog, foffset, fend);*/
             return -1;
         }
 
@@ -627,8 +627,8 @@ int Parallel_decoder::parallel_decode(char *config_filename, int primary, char* 
             int cpu_num;
             argc = fscanf(config_file, "%d%s", &cpu_num, arg);
             if (argc != 2) {
-                fprintf(stderr, "%s: sideband: "
-                    "missing argument.\n", prog);
+                //fprintf(stderr, "%s: sideband: "
+                  //  "missing argument.\n", prog);
                 goto err;
             }
             this->pevent.primary = (cpu_num == primary)? 1 : 0;
@@ -811,7 +811,7 @@ err:
 
 int Parallel_decoder::add_excl_decoder(char *config_filename, int primary, char* pt_filename)
 {
-    printf("\n %s %d %s \n", config_filename, primary, pt_filename);
+    //printf("\n %s %d %s \n", config_filename, primary, pt_filename);
     return parallel_decode(config_filename, primary, pt_filename);
 
 }

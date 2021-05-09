@@ -278,7 +278,7 @@ int pt_profiler_add(struct pt_profiler *profiler,
         for (int i = 0; i < call_stack; i++){
             printf("\t");
         }
-        printf("%s\n", line.functionname);
+        //printf("%s\n", line.functionname);
         if (!find_function(*source, line.functionname, func)){
             fprintf(stderr, "profiler: fail to find function\n");
             return -1;
@@ -300,14 +300,14 @@ int pt_profiler_add(struct pt_profiler *profiler,
 void pt_profiler_print(struct pt_profiler *profiler){
     struct sourcefile *source = profiler->source_list;
     while(source){
-        printf("%s\n", source->filename);
+        //printf("%s\n", source->filename);
         for (int i = 0; i < source->vol; i++){
-            if (source->cnt[i])
-                printf("\t\tline:%d\t\t%d\n",i, source->cnt[i]);
+            //if (source->cnt[i])
+                //printf("\t\tline:%d\t\t%d\n",i, source->cnt[i]);
         }
         struct function *func = source->func_list;
         while(func){
-            printf("\t\t\t%s:  %d\n", func->functionname, func->cnt);
+            //printf("\t\t\t%s:  %d\n", func->functionname, func->cnt);
             func = func->next;    
         }
         source = source->next;

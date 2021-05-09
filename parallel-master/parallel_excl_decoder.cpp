@@ -201,12 +201,12 @@ using namespace std;
                    for (int i = 0; i < source->vol; i++){
                        if (source->cnt[i])
                           outfile<<"\t\tline:"<<i<<"\t\t"<<source->cnt[i]<<"\n";
-                           printf("\t\tline:%d\t\t%d\n",i, source->cnt[i]);
+                           //printf("\t\tline:%d\t\t%d\n",i, source->cnt[i]);
                    }
                    struct function *func = source->func_list;
                    while(func){
                        outfile<< "\t\t\t"<<func->functionname<<"   "<<to_string(func->cnt)<<"\n";
-                       printf("\t\t\t%s:  %d\n", func->functionname, func->cnt);
+                       //printf("\t\t\t%s:  %d\n", func->functionname, func->cnt);
                        func = func->next;
                    }
                    source = source->next;
