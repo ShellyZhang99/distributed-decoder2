@@ -1212,7 +1212,7 @@ static int pt_sb_pevent_map(struct pt_sb_session *session,
 
 		filename = buffer;
 	}
-
+    fprintf(stdout, "\n new fileName : %s \n", filename);
 	errcode = pt_sb_pevent_track_abi(context, filename);
 	if (errcode < 0)
 		return errcode;
@@ -1226,9 +1226,20 @@ static int pt_sb_pevent_mmap(struct pt_sb_session *session,
 {
 	if (!record)
 		return -pte_internal;
+    if(strstr(record->filename,"/lib"))
+            {
+                char *tempname = (char*)malloc(100*sizeof(char));
+                strcpy(tempname, "/home/bigdataflow/SIRBenchmark/tempSys2");
+                strcat(tempname, record->filename);
 
-	return pt_sb_pevent_map(session, priv, record->pid, record->filename,
+	return pt_sb_pevent_map(session, priv, record->pid, tempname,
 				record->pgoff, record->len, record->addr);
+				}
+				else
+				{
+				return pt_sb_pevent_map(session, priv, record->pid, record->filename,
+                				record->pgoff, record->len, record->addr);
+				}
 }
 
 static int pt_sb_pevent_mmap2(struct pt_sb_session *session,
@@ -1237,9 +1248,20 @@ static int pt_sb_pevent_mmap2(struct pt_sb_session *session,
 {
 	if (!record)
 		return -pte_internal;
+    if(strstr(record->filename,"/lib"))
+                {
+                    char *tempname = (char*)malloc(100*sizeof(char));
+                    strcpy(tempname, "/home/bigdataflow/SIRBenchmark/tempSys2");
+                    strcat(tempname, record->filename);
 
-	return pt_sb_pevent_map(session, priv, record->pid, record->filename,
+	return pt_sb_pevent_map(session, priv, record->pid, tempname,
 				record->pgoff, record->len, record->addr);
+				}
+				else
+				{
+				return pt_sb_pevent_map(session, priv, record->pid, record->filename,
+                				record->pgoff, record->len, record->addr);
+				}
 }
 
 static int pt_sb_pevent_aux(const struct pt_sb_session *session,

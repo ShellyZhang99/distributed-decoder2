@@ -10,9 +10,9 @@ using namespace std;
 int main(){
     printf("0\n");
     Parallel_decoder* decoder = new Parallel_decoder();
-    decoder->add_excl_decoder("perf-attr-config", 2, "perf.data-aux-idx2.bin");
+    decoder->add_excl_decoder("perf-attr-config", 5, "perf.data-aux-idx5.bin");
 
-    int temp = decoder->excl_decoder[0].decode(16);
+    int temp = decoder->excl_decoder[1].decode(41);
     cout<<temp<<endl;
     return 0;
 }

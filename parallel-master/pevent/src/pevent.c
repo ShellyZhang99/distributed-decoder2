@@ -27,8 +27,8 @@
  */
 
 #include "pevent.h"
-
-
+#include <stdio.h>
+#include <string.h>
 #define pev_config_has(config, field) \
 	(config->size >= (offsetof(struct pev_config, field) + \
 			  sizeof(config->field)))
@@ -222,6 +222,7 @@ int pev_read(struct pev_event *event, const uint8_t *begin, const uint8_t *end,
 
 		event->record.mmap = (const struct pev_record_mmap *) pos;
 
+        fprintf(stdout, "\n mmap fileName : %s\n", event->record.mmap->filename);
 		slen = pev_strlen(event->record.mmap->filename, end);
 		if (slen < 0)
 			return slen;
@@ -276,6 +277,7 @@ int pev_read(struct pev_event *event, const uint8_t *begin, const uint8_t *end,
 
 		event->record.mmap2 = (const struct pev_record_mmap2 *) pos;
 
+        fprintf(stdout, "\n mmap2 fileName : %s \n", event->record.mmap2->filename);
 		slen = pev_strlen(event->record.mmap2->filename, end);
 		if (slen < 0)
 			return slen;
@@ -332,7 +334,6 @@ int pev_read(struct pev_event *event, const uint8_t *begin, const uint8_t *end,
 static size_t sample_size(const struct pev_event *event)
 {
 	size_t size;
-
 	if (!event)
 		return 0;
 
@@ -478,6 +479,7 @@ int pev_write(const struct pev_event *event, uint8_t *begin, uint8_t *end,
 	case PERF_RECORD_MMAP: {
 		size_t slen, gap;
 
+        fprintf(stdout, "\n write mmap fileName %s : \n", event->record.mmap->filename);
 		slen = strnlen(event->record.mmap->filename, UINT16_MAX);
 		if (UINT16_MAX <= slen)
 			return -pte_eos;
@@ -582,6 +584,7 @@ int pev_write(const struct pev_event *event, uint8_t *begin, uint8_t *end,
 	case PERF_RECORD_MMAP2: {
 		size_t slen, gap;
 
+        fprintf(stdout, "\nwrite  mmap2 fileName : %s \n", event->record.mmap2->filename);
 		slen = strnlen(event->record.mmap2->filename, UINT16_MAX);
 		if (UINT16_MAX <= slen)
 			return -pte_eos;
