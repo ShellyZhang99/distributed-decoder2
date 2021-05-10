@@ -108,15 +108,15 @@ using namespace std;
         if(!this->insn)
             return -1;
         ptdec = this->insn;
-        offset = 0;
-        sync = 0;
-        time = 0;
+        offset = 0ull;
+        sync = 0ull;
+        time = 0ull;
         const char *binary_name;
         for (;;) {
             struct pt_insn temp_insn;
 
             /* Initialize the IP - we use it for error reporting. */
-            temp_insn.ip = 0;
+            temp_insn.ip = 0ull;
 
             status = pt_insn_sync_forward(ptdec);
 
@@ -185,12 +185,14 @@ using namespace std;
     }
 
 ///gaixie func
-    int Parallel_excl_decoder::decode()
+    int Parallel_excl_decoder::decode(int no)
     {
         int result = decode_insn();
        ofstream outfile;
                    string fileName = "outputFileTemp";
-                   outfile.open("outputFileTemp.txt");
+                   fileName += to_string(no);
+                   fileName +=".txt";
+                   outfile.open(fileName);
                struct sourcefile *source = profiler->source_list;
                while(source){
                outfile<<"\n\n";

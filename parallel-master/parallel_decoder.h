@@ -62,10 +62,13 @@ public:
     		? pt_errstr(pt_errcode(errcode))
     		: pt_sb_errstr((enum pt_sb_error_code) errcode);
 
+
+
+
     	if (!errstr)
     		errstr = "<unknown error>";
 
-    	fprintf(stderr, "[%s:%016" PRIx64 " sideband %d %s: %s]\n", filename, offset,
+    	fprintf(stderr, "you got it [%s:%016" PRIx64 " sideband %d %s: %s]\n", filename, offset,
     	       id, severity, errstr);
 
     	return 0;
